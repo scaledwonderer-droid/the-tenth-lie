@@ -6,6 +6,14 @@
       "title": "孤島の晩餐会",
       "dataPath": "data/cases/case01.json",
       "unlocksAfter": null
+    },
+    {
+      "id": "case02",
+      "number": 2,
+      "title": "沈黙の告発者",
+      "englishTitle": "THE SILENT WHISTLEBLOWER",
+      "dataPath": "data/cases/case02.json",
+      "unlocksAfter": "case01"
     }
   ]
 }

@@ -127,6 +127,76 @@
         "age": 68,
         "occupation": "会社経営者・資産家"
       }
+    },
+    "takamiya": {
+      "id": "takamiya",
+      "name": "鷹宮 征司",
+      "portrait": "assets/characters/case02/case02_04_takamiya.png",
+      "gender": "male",
+      "profile": {
+        "age": 48,
+        "occupation": "専務取締役"
+      }
+    },
+    "shinohara": {
+      "id": "shinohara",
+      "name": "篠原 玲奈",
+      "portrait": "assets/characters/case02/case02_05_shinohara.png",
+      "gender": "female",
+      "profile": {
+        "age": 36,
+        "occupation": "経理部長"
+      }
+    },
+    "mikage": {
+      "id": "mikage",
+      "name": "御影 直人",
+      "portrait": "assets/characters/case02/case02_06_mikage.png",
+      "gender": "male",
+      "profile": {
+        "age": 29,
+        "occupation": "システム管理者"
+      }
+    },
+    "kiryu": {
+      "id": "kiryu",
+      "name": "桐生 真帆",
+      "portrait": "assets/characters/case02/case02_07_kiryu.png",
+      "gender": "female",
+      "profile": {
+        "age": 32,
+        "occupation": "広報責任者"
+      }
+    },
+    "dojima": {
+      "id": "dojima",
+      "name": "堂島 克彦",
+      "portrait": "assets/characters/case02/case02_08_dojima.png",
+      "gender": "male",
+      "profile": {
+        "age": 51,
+        "occupation": "警備責任者"
+      }
+    },
+    "hayase": {
+      "id": "hayase",
+      "name": "早瀬 奈緒",
+      "portrait": "assets/characters/case02/case02_09_hayase.png",
+      "gender": "female",
+      "profile": {
+        "age": 27,
+        "occupation": "新聞記者"
+      }
+    },
+    "hiiragi": {
+      "id": "hiiragi",
+      "name": "柊 冬香",
+      "portrait": "assets/characters/case02/case02_10_hiiragi.png",
+      "gender": "female",
+      "profile": {
+        "age": 44,
+        "occupation": "法務部長"
+      }
     }
   }
 }

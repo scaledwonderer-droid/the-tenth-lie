@@ -1,0 +1,1639 @@
+{
+  "id": "case02",
+  "number": 2,
+  "title": "沈黙の告発者",
+  "englishTitle": "THE SILENT WHISTLEBLOWER",
+  "location": "久世グループ郊外研修施設・資料保管室",
+  "victim": {
+    "name": "三枝 隆文",
+    "age": 58,
+    "occupation": "元内部監査室長",
+    "deathLocation": "研修施設・資料保管室",
+    "cause": "頭部への強い打撃による死亡",
+    "estimatedTime": "21時20分〜21時30分（21時24分前後）",
+    "foundAt": "22時42分"
+  },
+  "backgrounds": {
+    "office": "assets/backgrounds/common/common_bg_office.png",
+    "defeat": "assets/backgrounds/common/common_bg_defeat.png",
+    "facility": "assets/backgrounds/case02/case02_bg_facility.png",
+    "archive": "assets/backgrounds/case02/case02_bg_archive.png",
+    "meeting": "assets/backgrounds/case02/case02_bg_meeting.png",
+    "interview": "assets/backgrounds/case02/case02_bg_meeting.png"
+  },
+  "audio": {},
+  "incidentContext": "なし",
+  "deductionSummary": "昨夜、久世グループ研修施設の資料保管室で、元内部監査室長の三枝隆文が殺害された。死亡推定時刻の後、本人名義のメッセージが送信されている。",
+  "introduction": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生、お仕事の依頼が入りました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "……久世グループという名前、覚えていらっしゃいますか？"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "3か月前、黒百合館で殺害された久世宗一郎氏が経営していた企業グループです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "あの事件以降、経営体制の見直しが進められていたそうですが、どうやら社内には、まだ多くの問題が残されていたようです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "昨夜、久世グループの研修施設で、一人の男性が殺害されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "被害者は、かつて同グループの内部監査室長を務めていた人物です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "彼は生前、企業内部の重大な不正を告発しようとしていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "しかし、その告発が実行されることはありませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それだけではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "被害者が死亡したと考えられる時刻より後に、本人からメッセージが送信されているのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "まるで、死者が自らの告発を取り下げたかのように"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回も、少々厄介な事件になりそうですね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それでは、詳しい状況をご説明します"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "こちらが事件の舞台となった研修施設です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "久世グループが所有する施設で、一般的な社員研修のほか、役員会議や非公開の会合にも利用されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "郊外に位置しており、周囲には民家もほとんどありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "昨夜、この施設で関係者を集めた非公開の会合が開かれました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "会合を主催したのは、今回の被害者である三枝隆文氏"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "58歳。久世グループの元内部監査室長です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "三枝氏は久世宗一郎氏の死後、長年勤めていた会社を退職しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "退職後は、在職中に把握した企業内部の不正について、独自に調査を続けていたそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "そして昨夜、関係者を前に、重大な宣言を行いました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "翌朝9時、企業内部の不正を示す資料を報道機関に提出する、と"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "会合には三枝氏を含め、11人が出席していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "その中には、先生もご存じの人物が3人います"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "ジャーナリストの神崎蓮氏"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "久世宗一郎氏の長男、久世怜司氏"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "そして、顧問弁護士の黒川修一氏です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "黒百合館の事件で顔を合わせた方々ですね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "施設の宿泊棟には、会合の出席者たちが滞在していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "警備記録によれば、事件発生時間帯に外部から施設へ出入りした人物はいません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "facility",
+      "text": "今回も、残された10人の中に犯人がいると考えられています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "会合は午後7時に始まり、午後8時10分に終了しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "三枝氏は、自身が入手した資料の存在と、翌朝の告発について説明しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "資料の具体的な内容については、その場では公開しなかったそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "会合終了後、出席者たちはそれぞれの部屋へ戻りました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "ところが、午後10時15分"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "出席者全員の端末に、三枝氏から一斉にメッセージが届きました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "内容は、次のとおりです"
+    },
+    {
+      "speaker": "三枝隆文",
+      "portrait": "",
+      "background": "meeting",
+      "text": "送信者：三枝隆文\n送信時刻：22:15\n\n告発は取りやめる。\n明朝、改めて説明する。\n今夜は私を捜さないでほしい。"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "突然の方針転換に、出席者たちは困惑しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "ただ、本人が告発を取りやめると言っている以上、すぐに異常を疑う者は多くなかったようです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "しかし、三枝氏から資料を受け取る予定だった新聞記者の早瀬奈緒氏は、このメッセージに違和感を覚えました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "三枝氏は会合の直後まで、告発を実行する強い意志を示していたからです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "早瀬氏は三枝氏に何度か連絡を試みましたが、応答はありませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "不審に思った早瀬氏は、警備責任者に相談しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "そして、施設内の捜索が始まりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "午後10時42分"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "警備責任者の堂島克彦氏が、この資料保管室で三枝氏の遺体を発見しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "早瀬氏も、その場に同行していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏は作業机の近くに倒れていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "死因は、頭部への強い打撃によるものです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "現場から凶器は発見されていません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "また、三枝氏が持ち歩いていた告発資料とスマートフォンも、現場からなくなっていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏はスマートウォッチを着用していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "その記録と司法解剖の結果を照合したところ、死亡時刻は午後9時24分前後と推定されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "つまり、告発を取りやめるというメッセージが送られた時点で、三枝氏はすでに死亡していたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "誰かが、三枝氏に代わってメッセージを送信したことになります"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "それが殺害した本人なのか、それとも別の人物なのか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "今回の事件では、その点も重要になりそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "こちらが、現在までに確認されている事件資料です"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e01",
+      "title": "資料01　被害者情報",
+      "text": "名前：三枝隆文（さえぐさ たかふみ）\n性別：男性\n年齢：58歳\n職業：元内部監査室長\n所属：元久世グループ社員\n死亡場所：研修施設・資料保管室\n死因：頭部への打撃による死亡\n推定死亡時刻：21:24前後\n遺体発見時刻：22:42\n遺体発見者：堂島克彦、早瀬奈緒\n久世グループに30年以上勤務していた。\n久世宗一郎の死後に退職し、企業内部の不正を独自に調査していた。\n翌朝9時、告発資料を新聞記者の早瀬奈緒へ引き渡す予定だった。"
+    },
+    {
+      "id": "e02",
+      "title": "資料02　遺体発見時の状況",
+      "text": "- 遺体は資料保管室の作業机付近で発見された。\n- 頭部に致命傷が確認された。\n- 室内には争った形跡があった。\n- 凶器は発見されていない。\n- 被害者のスマートフォンがなくなっていた。\n- 被害者が所持していた告発資料の入った書類ケースもなくなっていた。\n- 被害者の右手には衣服の繊維片が握られていた。\n資料保管室の出入口は一か所のみである。\n人が通行できる窓や別の出入口は存在しない。"
+    },
+    {
+      "id": "e03",
+      "title": "資料03　司法解剖報告書",
+      "text": "死因は、頭部への強い打撃による死亡。\n被害者には生前に他者と争ったことを示す痕跡が確認されている。\n推定死亡時刻は21時20分から21時30分までの間。\n負傷後、被害者が自力で歩き回ったり、文章を作成して送信したりすることは困難だったと判断されている。\n自殺および単純な転倒事故の可能性は否定されている。"
+    },
+    {
+      "id": "e04",
+      "title": "資料04　スマートウォッチの記録",
+      "text": "被害者が着用していたスマートウォッチから、以下の記録が取得された。\n時刻 | 記録内容\n21:17 | 通常の心拍および活動を記録\n21:23 | 急激な身体の動きを検知\n21:24 | 転倒を検知\n21:25以降 | 有効な心拍記録なし\n時計は遺体発見時まで被害者の腕に装着されていた。\n取り外しや機器の異常を示す記録はない。\nこの記録は単独で死亡時刻を確定するものではないが、司法解剖の結果と整合している。\n被害者は21時24分前後に致命傷を負い、その直後に死亡したと考えられる。"
+    },
+    {
+      "id": "e05",
+      "title": "資料05　資料保管室の入退室記録",
+      "text": "資料保管室の出入口は電子錠によって管理されている。\n事件当日の記録は以下のとおりである。\n時刻 | 人物 | 記録\n20:30 | 堂島克彦 | 入室\n20:36 | 堂島克彦 | 退出\n21:02 | 三枝隆文 | 入室\n21:16 | 篠原玲奈 | 入室\n21:32 | 篠原玲奈 | 退出\n22:42 | 堂島克彦・早瀬奈緒 | 入室\n20時36分の時点で、室内に誰も残っていなかったことが堂島の巡回記録と監視映像から確認されている。\nまた、21時2分以降、22時42分までの間に入室した人物は、三枝隆文と篠原玲奈のみである。\n入退室記録の改変や欠落は確認されていない。"
+    },
+    {
+      "id": "e06",
+      "title": "資料06　施設内監視映像",
+      "text": "施設内の複数の監視カメラから、以下の行動が確認された。\n時刻 | 記録内容\n20:18 | 三枝隆文が書類ケースを持って会議室から退出\n21:02 | 三枝隆文が資料保管室に入室\n21:16 | 篠原玲奈が資料保管室に入室\n21:32 | 篠原玲奈が書類ケースを持って退出\n21:48 | 篠原玲奈が管理室前で御影直人と接触\n22:15 | 御影直人が管理室に滞在\n22:42 | 堂島克彦と早瀬奈緒が資料保管室に入室\n21時32分に篠原玲奈が持っていた書類ケースは、三枝隆文が所持していたものと外観上の特徴が一致している。\n21時48分の映像には、篠原玲奈が御影直人に小型の物品を渡す様子が記録されている。\n映像だけでは、その物品の詳細までは確認できない。\n監視映像は独立した記録装置に保存されており、第三者機関による鑑定でも編集や改変の痕跡は確認されていない。"
+    },
+    {
+      "id": "e07",
+      "title": "資料07　消失した告発資料",
+      "text": "三枝隆文は、会合の際に黒い書類ケースを所持していた。\n本人の説明によれば、その中には以下の資料が収められていた。\n- 不正な会計処理に関する記録\n- 社内データの変更履歴\n- 関係者の氏名\n- 不正の発生時期\n- 関係する企業および取引の記録\n事件発覚後、書類ケースは施設内の廃棄物保管場所から発見された。\n内部の資料はなくなっていた。\n告発資料の具体的な内容については、現時点では明らかになっていない。"
+    },
+    {
+      "id": "e08",
+      "title": "資料08　被害者からのメッセージ",
+      "text": "送信者：三枝隆文\n送信時刻：22:15\n受信者：会合に参加した10人全員\n告発は取りやめる。\n明朝、改めて説明する。\n今夜は私を捜さないでほしい。\n全員の受信記録が一致している。\n送信時刻の表示に異常はない。\n被害者の死亡推定時刻より約50分後に送信されている。"
+    },
+    {
+      "id": "e09",
+      "title": "資料09　メッセージの送信記録",
+      "text": "通信サービスおよび端末の鑑定によって、以下の事実が確認された。\n- メッセージは予約送信ではない。\n- 自動送信によるものでもない。\n- 22時15分に被害者本人のスマートフォンから操作され、送信された。\n- 別の端末から被害者のアカウントにアクセスした記録はない。\n被害者のスマートフォンは、事件発覚後、御影直人が使用していた管理室から発見された。\n管理室内の監視映像には、22時15分に御影直人が被害者のスマートフォンを操作している様子が記録されていた。\n端末の操作記録と映像の時刻は一致している。\nこの時間帯、管理室にいた人物は御影直人のみである。"
+    },
+    {
+      "id": "e10",
+      "title": "資料10　被害者が握っていた繊維片",
+      "text": "被害者の右手から、灰色の衣服の繊維片が発見された。\n繊維片について鑑定を行った結果、篠原玲奈が事件当日に着用していたチャコールグレーのジャケットと一致した。\nジャケットの袖口には、新しい破損箇所が確認された。\n繊維片と破損箇所は、色や材質だけでなく、断裂部分の形状も一致している。\n鑑定結果から、繊維片は篠原玲奈のジャケットから直接引きちぎられたものと判断された。"
+    },
+    {
+      "id": "e11",
+      "title": "資料11　会議室の録音記録",
+      "text": "会議室の録音設備には、会合終了後の三枝隆文と篠原玲奈の会話が残されていた。\n録音時刻：20:12～20:15\n三枝隆文：\n「篠原君。君も分かっているだろう」\n篠原玲奈：\n「今になって、どうしてそんなことをするんですか」\n三枝隆文：\n「今だからこそだ。これ以上、見て見ぬふりはできない」\n篠原玲奈：\n「資料には、私の名前も入っているんですか？」\n三枝隆文：\n「会計記録も、システムの変更履歴も残っている」\n篠原玲奈：\n「……私だけの責任ではありません」\n三枝隆文：\n「誰がどこまで関わったのか。それを判断するのは私ではない」\n篠原玲奈：\n「明日の朝まで、待っていただけませんか」\n三枝隆文：\n「もう決めたことだ」\n録音終了。"
+    },
+    {
+      "id": "e12",
+      "title": "資料12　社内連絡システムの記録",
+      "text": "施設内で使用されていた社内連絡システムから、篠原玲奈と御影直人の個別メッセージが復元された。\n以下のやり取りは会合開始前に行われている。\n18:21　篠原玲奈\n「今夜の件、予定に変更はないわ」\n18:23　御影直人\n「本当にやるんですか？」\n18:24　篠原玲奈\n「明日の朝になれば、私たちの名前が外に出る」\n18:26　御影直人\n「三枝さんが戻ってこなくなるということですよね」\n18:27　篠原玲奈\n「ええ。もう二度と告発できないようにする」\n18:28　御影直人\n「……分かりました。メッセージの件は引き受けます」\n18:29　篠原玲奈\n「お願い。二人のためよ」\n同日21時50分、さらに以下の連絡が行われている。\n21:50　篠原玲奈\n「終わったわ」\n21:51　御影直人\n「もう、生きてはいないんですね？」\n21:52　篠原玲奈\n「ええ」\n21:53　御影直人\n「分かりました。約束どおりにします」\n各メッセージの送信者については、端末の利用記録および認証記録によって本人であることが確認されている。\n記録の改変は確認されていない。"
+    }
+  ],
+  "suspects": [
+    {
+      "id": "kanzaki",
+      "number": 1,
+      "gender": "male",
+      "age": 33,
+      "occupation": "ジャーナリスト",
+      "relationship": "会合参加者",
+      "publicProfile": "企業や政財界を中心に取材するジャーナリスト。\n3か月前の黒百合館殺人事件にも居合わせていた。\n久世グループの企業活動について独自に調査を続けている。",
+      "statement": [
+        "「またお会いしましたね、先生」",
+        "「まさか、こんな形で再会するとは思いませんでしたよ」",
+        "「三枝さんとは、黒百合館の事件が終わった後に知り合いました」",
+        "「彼が調べていたことと、俺が追っていることには共通点があったんです」",
+        "「何を調べていたのか？」",
+        "「申し訳ないですが、取材源に関わることは話せません」",
+        "「会合の後は、自室で記事の原稿を書いていました」",
+        "「資料保管室には近づいていません」",
+        "「告発を取りやめるというメッセージには驚きましたよ」",
+        "「あの人は、自分が何を失うことになっても告発すると言っていましたから」",
+        "「数時間で考えが変わるとは思えません」",
+        "「誰かに脅されたか、あるいは……」",
+        "「本人が送ったものではなかったのかもしれませんね」"
+      ]
+    },
+    {
+      "id": "reiji",
+      "number": 2,
+      "gender": "male",
+      "age": 42,
+      "occupation": "会社役員",
+      "relationship": "会合参加者",
+      "publicProfile": "故・久世宗一郎の長男。\n久世グループの役員を務めている。\n父親の死後、次期経営体制をめぐる社内の対立に巻き込まれている。",
+      "statement": [
+        "「またあなたか」",
+        "「父の事件が片付いたばかりだというのに、今度は三枝とはな」",
+        "「三枝は父の時代から会社にいた人間だ」",
+        "「内部事情に詳しいことは知っていた」",
+        "「だが、何を告発しようとしていたのか、詳しいことは知らない」",
+        "「会社の不正について心当たりがないか、だと？」",
+        "「これだけ大きな会社だ。私の知らないところで問題が起きていても不思議ではないだろう」",
+        "「昨夜は自室にいた」",
+        "「会合が終わってから三枝とは会っていない」",
+        "「告発の取り下げについては、本人が考え直したのだと思った」",
+        "「少なくとも、その時点ではな」",
+        "「父の事件と今回の事件を、何でも結びつけて考えないでもらいたい」"
+      ]
+    },
+    {
+      "id": "kurokawa",
+      "number": 3,
+      "gender": "male",
+      "age": 56,
+      "occupation": "弁護士",
+      "relationship": "会合参加者",
+      "publicProfile": "故・久世宗一郎の顧問弁護士。\n現在も久世グループの法務に関与している。\n企業内部の事情や過去の取引に詳しい人物。",
+      "statement": [
+        "「ご無沙汰しております」",
+        "「再び殺人事件でお会いすることになるとは、残念なことです」",
+        "「三枝氏からは、告発に伴う法的な問題について相談を受けていました」",
+        "「ただし、具体的な相談内容については申し上げられません」",
+        "「守秘義務がございますので」",
+        "「昨夜は会合の後、柊さんと打ち合わせをしていました」",
+        "「企業としての対応と、個人としての責任は区別する必要がありますからね」",
+        "「三枝氏は、告発を妨害される可能性を懸念していました」",
+        "「それでも実行するという意思は固かったように思います」",
+        "「自ら告発を取りやめたという話には、私も違和感を覚えました」",
+        "「もっとも、人の意思というものは、状況によって変化するものですが」",
+        "「今回の場合、その変化を説明するものが見当たりませんね」"
+      ]
+    },
+    {
+      "id": "takamiya",
+      "number": 4,
+      "gender": "male",
+      "age": 48,
+      "occupation": "専務取締役",
+      "relationship": "会合参加者",
+      "publicProfile": "久世グループの専務取締役。\n久世宗一郎の死後、実質的な経営責任者として影響力を強めている。\n経営の安定と企業価値の維持を重視している。",
+      "statement": [
+        "「三枝君が亡くなったことは、非常に残念に思っています」",
+        "「彼は優秀な社員でした」",
+        "「ただ、今回の行動については、賛同できるものではありませんでしたね」",
+        "「企業には、外部に公開できない情報というものがあります」",
+        "「一つの問題を公にしたことで、無関係な社員や取引先まで損害を受けることもある」",
+        "「私はその点を懸念していたのです」",
+        "「昨夜は会合の後、本社と電話で連絡を取っていました」",
+        "「三枝君とは会っていません」",
+        "「資料の所在についても知りません」",
+        "「告発が中止されたという知らせを受けたときは、正直なところ安心しました」",
+        "「ですが、誰かが殺害されることを望んでいたわけではありません」",
+        "「会社を守ることと、人を殺すことを混同しないでいただきたい」"
+      ]
+    },
+    {
+      "id": "shinohara",
+      "number": 5,
+      "gender": "female",
+      "age": 36,
+      "occupation": "経理部長",
+      "relationship": "会合参加者",
+      "publicProfile": "久世グループの経理部門を統括している。\n冷静で几帳面な性格で、長年にわたり会社の会計業務に関与してきた。\n三枝隆文とは内部監査業務を通じて付き合いがあった。",
+      "statement": [
+        "「三枝さんとは、長い仕事上の付き合いがありました」",
+        "「監査を担当する方でしたから、意見が食い違うこともありました」",
+        "「昨夜も会議室で少し言い争ったことは認めます」",
+        "「ですが、感情的な対立ではありません」",
+        "「会社に関する認識の違いです」",
+        "「会合の後、資料保管室へ書類を取りに行きました」",
+        "「三枝さんが室内にいたことは覚えています」",
+        "「私が退出したときには、まだ生きていました」",
+        "「間違いありません」",
+        "「書類ケースですか？」",
+        "「あれは経理部の資料を持ち運ぶために使用していたものです」",
+        "「三枝さんのものではありません」",
+        "「ジャケットの破れは、資料棚に引っ掛けてしまっただけです」",
+        "「御影さんとは、業務上の連絡を取ったことがあります」",
+        "「ですが、三枝さんの殺害とは無関係です」",
+        "「私があの方を殺害したというのなら、きちんとした根拠を示していただけますか？」"
+      ]
+    },
+    {
+      "id": "mikage",
+      "number": 6,
+      "gender": "male",
+      "age": 29,
+      "occupation": "システム管理者",
+      "relationship": "会合参加者",
+      "publicProfile": "久世グループの通信設備や社内ネットワークを管理する技術者。\n施設内のシステム管理も担当している。\n口数が少なく、人付き合いを苦手としている。",
+      "statement": [
+        "「俺は、設備の管理をしていただけです」",
+        "「会議には出席しましたけど、会社の経営について何か決められる立場じゃないですから」",
+        "「昨夜は管理室でネットワークの点検をしていました」",
+        "「三枝さんからのメッセージは、俺にも届きました」",
+        "「でも、俺が送ったわけじゃありません」",
+        "「三枝さんのスマートフォンが管理室にあったことについては……」",
+        "「誰かが持ち込んだんじゃないですか？」",
+        "「俺は知りません」",
+        "「篠原さんと昨夜会ったか、ですか？」",
+        "「会議以外では会っていません」",
+        "「個別に話したこともありません」",
+        "「連絡記録については、何か業務上の話をしていたんだと思います」",
+        "「細かい内容までは覚えていません」",
+        "「システム管理者だからといって、何でもできるわけじゃないんです」",
+        "「俺を疑うのはやめてもらえませんか」"
+      ]
+    },
+    {
+      "id": "kiryu",
+      "number": 7,
+      "gender": "female",
+      "age": 32,
+      "occupation": "広報責任者",
+      "relationship": "会合参加者",
+      "publicProfile": "久世グループの広報部門を担当している。\n報道機関との調整や企業イメージの管理を行っている。\n社内外に幅広い人脈を持っている。",
+      "statement": [
+        "「告発の話が出てから、社内は大変な騒ぎでした」",
+        "「広報としては、どう対応するか考えなければなりませんから」",
+        "「もっとも、事実を隠せば問題が解決するわけではありませんけどね」",
+        "「昨夜、会議が始まる前に篠原さんと御影さんを見かけました」",
+        "「廊下の隅で話をしていたんです」",
+        "「二人とも随分と深刻そうな顔をしていました」",
+        "「私が近づいたら、会話をやめてしまったので、内容までは分かりません」",
+        "「会合の後は、今後の報道対応について資料を整理していました」",
+        "「三枝さんとは会っていません」",
+        "「告発を取りやめるというメッセージを見たときは、少し意外でした」",
+        "「文章の印象が、会合での三枝さんとは違っていたので」",
+        "「もちろん、それだけで誰かを疑うつもりはありません」",
+        "「言葉というものは、受け取る側の印象でも変わりますから」"
+      ]
+    },
+    {
+      "id": "dojima",
+      "number": 8,
+      "gender": "male",
+      "age": 51,
+      "occupation": "警備責任者",
+      "relationship": "会合参加者",
+      "publicProfile": "元警察官。\n現在は久世グループ研修施設の警備責任者を務めている。\n施設内の防犯設備や巡回業務を管理している。",
+      "statement": [
+        "「遺体を発見したのは私です」",
+        "「早瀬さんから、三枝さんと連絡が取れないと相談を受けました」",
+        "「宿泊室を確認しましたが、不在でした」",
+        "「入退室記録を調べたところ、最後に資料保管室へ入っていたことが分かりました」",
+        "「そこで早瀬さんと一緒に確認に向かったのです」",
+        "「発見時、三枝さんはすでに亡くなっていました」",
+        "「資料保管室については、私も午後8時半頃に巡回しています」",
+        "「その時点では異常はありませんでした」",
+        "「室内に誰も残っていなかったことも確認しています」",
+        "「出入口は一か所です」",
+        "「防犯設備にも異常はありません」",
+        "「記録に残らず、誰かが室内へ出入りした可能性は考えにくいでしょう」",
+        "「ただし、今回のような事態を防げなかったことについては、警備責任者として責任を感じています」"
+      ]
+    },
+    {
+      "id": "hayase",
+      "number": 9,
+      "gender": "female",
+      "age": 27,
+      "occupation": "新聞記者",
+      "relationship": "会合参加者",
+      "publicProfile": "企業不正を中心に取材している若手新聞記者。\n三枝隆文から告発資料を受け取る予定だった。\n神崎蓮とは仕事上の面識がある。",
+      "statement": [
+        "「三枝さんとは、翌朝9時に資料を受け取る約束をしていました」",
+        "「昨夜の会議が終わった後も、必ず資料を渡すと言っていました」",
+        "「ずっと悩んできたけれど、もう迷いはない、と」",
+        "「だから、告発を取りやめるというメッセージを見たとき、何かがおかしいと思ったんです」",
+        "「何度か電話をかけましたけど、応答がありませんでした」",
+        "「それで堂島さんに相談しました」",
+        "「まさか、本当に殺されていたなんて……」",
+        "「三枝さんは、社内の情報が勝手に変更されている可能性についても話していました」",
+        "「そのせいか、システム関係者をあまり信用していない様子でした」",
+        "「自分の端末を御影さんに預けるなんて、考えにくいと思います」",
+        "「三枝さんは会社を壊したかったわけじゃありません」",
+        "「間違っていることを、正したかっただけなんです」",
+        "「……どうか、事件の真相を明らかにしてください」"
+      ]
+    },
+    {
+      "id": "hiiragi",
+      "number": 10,
+      "gender": "female",
+      "age": 44,
+      "occupation": "法務部長",
+      "relationship": "会合参加者",
+      "publicProfile": "久世グループの法務部門を統括する女性。\n企業法務や社内規則に精通している。\n顧問弁護士の黒川修一とは長年にわたり仕事上の付き合いがある。",
+      "statement": [
+        "「昨夜は黒川先生と打ち合わせをしていました」",
+        "「三枝さんの告発によって発生する可能性のある法的問題についてです」",
+        "「告発の内容次第では、会社そのものにも大きな影響が及びますから」",
+        "「ただ、企業の利益を守ることと、不正を隠蔽することは別の問題です」",
+        "「その区別は必要だと考えています」",
+        "「会議が始まる前、篠原さんが御影さんと話しているのを耳にしました」",
+        "「『例のメッセージ、お願いね』と」",
+        "「御影さんは、少し困ったような顔をしていました」",
+        "「当時は通常の業務連絡だと思っていました」",
+        "「二人は経理とシステム管理という立場ですから、連絡を取り合うこと自体は珍しくありません」",
+        "「ですが、今になって考えると、気になる言葉ですね」",
+        "「三枝さんが何を告発しようとしていたのか？」",
+        "「それについて、私から確かなことを申し上げることはできません」",
+        "「憶測で誰かの名前を挙げることは、避けるべきでしょう」"
+      ]
+    }
+  ],
+  "deductionLead": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "以上が、10人の供述です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回も、皆さんの言葉をそのまま信じるわけにはいかないようですね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "三枝氏が死亡した時刻"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "資料保管室への入退室記録"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、死後に送信されたメッセージ"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "一見すると別々の出来事ですが、これらはどこかでつながっているはずです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "企業内部の不正についても、気になる話がいくつかありました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "ですが、今回私たちが解決すべきなのは、三枝氏の殺害事件です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "不正に関与している人物が、必ずしも殺人犯であるとは限りません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "誰が三枝氏を殺害したのか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、その犯行に協力した人物が存在するのか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "事件資料と供述を照らし合わせてみましょう"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生の推理をお聞かせください"
+    }
+  ],
+  "accusationPrompts": {
+    "culprit": [
+      "先生、推理はまとまりましたか？",
+      "それでは、三枝隆文氏を殺害した犯人を指名してください"
+    ],
+    "accomplice": [
+      "続いて、犯行に協力した共謀者を指名してください",
+      "共謀者が存在しないとお考えの場合は、そのように選択してください"
+    ],
+    "confirm": [
+      "こちらが、先生の推理ですね",
+      "この内容で確定しますか？"
+    ]
+  },
+  "solution": {
+    "culprit": "shinohara",
+    "accomplice": "mikage"
+  },
+  "defeat": [
+    {
+      "speaker": "female",
+      "text": "……ふふっ"
+    },
+    {
+      "speaker": "female",
+      "text": "名探偵と聞いていたけれど、大したことはないのね"
+    },
+    {
+      "speaker": "male",
+      "text": "意外と簡単なことだったんですけどね"
+    },
+    {
+      "speaker": "female",
+      "text": "数字というものは便利よね"
+    },
+    {
+      "speaker": "female",
+      "text": "誰もが、それを客観的な事実だと思ってくれる"
+    },
+    {
+      "speaker": "male",
+      "text": "記録が残っているからって、それを残した人間まで正しいとは限りません"
+    },
+    {
+      "speaker": "female",
+      "text": "一つひとつの数字に、ちゃんと意味があったのに"
+    },
+    {
+      "speaker": "male",
+      "text": "死んだ人間は、自分の言葉を訂正することもできませんから"
+    },
+    {
+      "speaker": "female",
+      "text": "彼も今頃、後悔しているかしら"
+    },
+    {
+      "speaker": "female",
+      "text": "黙っていれば、こんなことにはならなかったのに"
+    },
+    {
+      "speaker": "male",
+      "text": "もう、何も告発できませんけどね"
+    },
+    {
+      "speaker": "female",
+      "text": "さようなら、名探偵さん"
+    },
+    {
+      "speaker": "female",
+      "text": "次はもう少し、数字を丁寧に読んでみたらどう？"
+    }
+  ],
+  "resolution": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生、お見事です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生の推理をもとに警察が捜査を進めた結果、事件の真相が明らかになりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "三枝隆文氏を殺害した犯人は、久世グループ経理部長、篠原玲奈"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、その犯行に協力した共謀者は、システム管理者の御影直人でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回の事件では、被害者自身が残した記録が、二人の嘘を暴くことになりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それでは、事件の全貌をご説明します"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "まず、今回の事件を解くうえで重要だったのは、三枝氏の死亡時刻です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏が告発を取りやめるというメッセージを送ったのは、午後10時15分"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "もし本人が送信したのであれば、その時点では生きていたことになります"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "しかし、スマートウォッチには、午後9時24分に転倒が記録されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "その後、有効な心拍記録は残っていません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "もちろん、時計の記録だけで人の死亡を断定することはできません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "ですが、司法解剖の結果も、その時間帯の死亡を示していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏は午後9時24分前後に致命傷を負い、その直後に亡くなったと考えられます"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "つまり、午後10時15分のメッセージは、三枝氏本人が送信したものではなかったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "この二つの時刻の矛盾が、今回の事件の出発点でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "では、三枝氏が致命傷を負ったとき、誰が資料保管室にいたのでしょうか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "午後9時2分、三枝氏が入室しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "続いて、午後9時16分に篠原氏が入室しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "そして、篠原氏が退出したのは午後9時32分です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "被害者が致命傷を負ったと推定される午後9時24分"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "その時刻、資料保管室にいた人物は、三枝氏と篠原氏の二人だけでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "ほかの人物が室内に隠れていた可能性や、記録にない出入りについても否定されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "篠原氏は、自分が退出したとき、三枝氏はまだ生きていたと供述しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "しかし、その供述は死亡時刻と一致しません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "篠原氏は、三枝氏が死亡した時間帯に、被害者と同じ場所にいたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "さらに、三枝氏の右手からは衣服の繊維片が発見されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "その繊維片は、篠原氏が着用していたジャケットの破損箇所と一致しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "同じ種類の布だったというだけではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "引きちぎられた部分の形状まで一致していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "篠原氏は、資料棚に袖を引っ掛けたと説明していましたね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "ですが、その説明では、なぜ被害者が破片を握っていたのか説明できません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "司法解剖でも、三枝氏が生前に他者と争っていたことが確認されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "さらに篠原氏は、三枝氏が所持していたものと特徴の一致する書類ケースを持って、資料保管室から退出していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "彼女は三枝氏と争い、殺害した後、告発資料とスマートフォンを持ち去ったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "archive",
+      "text": "そのことは、警察による取り調べでも確認されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "続いて、午後10時15分に送信されたメッセージについてです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "当初は、予約送信や自動送信の可能性も考えられました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "しかし、鑑定によって、それらの可能性は否定されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "メッセージは送信時刻に、三枝氏のスマートフォンを操作して送られたものです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "そのスマートフォンが発見されたのは、御影氏が使用していた管理室でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "管理室の監視映像には、御影氏が送信時刻に端末を操作する様子も残されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "端末の操作記録と映像の時刻も一致しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "御影氏は、メッセージを送っていないと供述しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "スマートフォンが管理室にあった理由も知らないと"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "ですが、それらは明確な嘘でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "meeting",
+      "text": "死者の名前を使ってメッセージを送った人物は、御影直人だったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "ただし、ここで一つの疑問が残ります"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "御影氏が虚偽のメッセージを送ったことは確かです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "ですが、殺害が行われた後になって、篠原氏に協力を求められた可能性も考えられます"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "それでは、事前に殺害計画へ参加していた共謀者とは限りません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "そこで重要になるのが、二人の社内連絡記録です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "午後6時台、まだ会合が始まる前のことです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "御影氏は、三枝氏が戻ってこなくなるということなのか、篠原氏に確認していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "篠原氏は、三枝氏が二度と告発できないようにすると答えています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "御影氏は、それを理解したうえでメッセージの送信を引き受けました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "そして犯行後、午後9時51分"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "御影氏は、三枝氏がもう生きていないことを確認しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "篠原氏から肯定する返答を受けると、約束どおりにすると返信しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "その後、御影氏は実際に虚偽のメッセージを送信しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "犯行前の会話と、犯行後の確認"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "そして、実際に行われた工作"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "これらは一つの計画としてつながっています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "御影氏は偶然巻き込まれた人物ではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "三枝氏の殺害を前提とした計画に、事前から参加していたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "meeting",
+      "text": "二人は警察の取り調べでも、その事実を認めています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "篠原氏は、久世グループの経理部長として、長年にわたり会計業務を担当していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "その過程で、彼女は複数の不正な会計処理に関与していたそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "当初は、上層部からの指示に従っていただけだったと供述しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "しかし、時間が経つにつれ、自らの判断で不正に関与するようになったとのことです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "内部監査室長だった三枝氏は、そうした処理の存在に気づいていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "久世宗一郎氏が亡くなった後、三枝氏は会社を退職しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "そして、在職中に把握した不正について調査を続け、告発を決意したのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "篠原氏は、三枝氏が自分の関与を示す資料を持っていることを知っていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "告発が実行されれば、現在の地位も、築き上げてきた人生も失うことになる"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "その恐怖が、今回の犯行へとつながったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "警察の取り調べで、彼女はこう話したそうです"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "最初は、たった一度のことだったんです"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "上から言われたとおりに、数字を処理しただけでした"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "そのうち、自分でも何が正しいのか分からなくなって……"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "気づいたときには、もう戻れなくなっていました"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "明日になれば、すべてが終わると思ったんです"
+    },
+    {
+      "speaker": "shinohara",
+      "portrait": "shinohara",
+      "background": "facility",
+      "text": "……だから、終わらせようとしました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "御影氏もまた、企業内部の不正に関与していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "彼はシステム管理者として、不正に関係する社内データの変更に協力していたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "篠原氏と同じように、告発が実行されれば、自らの関与が明らかになる立場でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "篠原氏から殺害計画を持ちかけられた際、御影氏は当初、ためらっていたそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "ですが、最終的には協力することを選びました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "御影氏は取り調べの中で、こう供述しています"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "俺は、直接手を下したわけじゃありません"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "頼まれたことをやっただけです"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "でも……"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "何が起きるのか、分かっていました"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "分かっていて、引き受けたんです"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "止めようと思えば、止められたのかもしれません"
+    },
+    {
+      "speaker": "mikage",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "……今さら、何を言っても遅いですよね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "御影氏は、自ら三枝氏を殺害したわけではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "しかし、殺害を前提とした計画を認識し、それに協力していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "mikage",
+      "background": "facility",
+      "text": "それが、今回の事件における彼の役割だったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏が所持していた告発資料は、犯行後に篠原氏と御影氏によって処分されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "二人は、資料をなくせば不正の発覚も防げると考えていたようです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "ですが、三枝氏は慎重な人物でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "告発資料は一つだけではなかったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "事件解決後、三枝氏の自宅から資料の複製が発見されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "警察は、それらの資料についても調査を進めているとのことです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "もっとも、資料に記載されていた内容については、現在も捜査中です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "篠原氏と御影氏の関与だけでは説明できない問題も含まれているようですね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "三枝氏は命を奪われました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "archive",
+      "text": "ですが、彼が残した記録まで消し去ることはできなかったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "これで、三枝隆文氏の殺害事件は解決しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "黒百合館での事件から、わずか3か月"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "再び久世グループに関係する人物が殺害されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "二つの事件の犯人は、それぞれ異なる人物でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "ですが、どちらの事件にも、過去から積み重なってきた問題が関係していたように思います"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "神崎氏も、久世氏も、黒川氏も、今回の殺害には関与していませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "もっとも、皆さんがすべてを話していたかどうかは、別の問題です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "人は、自分に都合の悪い事実を隠そうとするものですから"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "三枝氏は、生きて真実を語ることができませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それでも、彼が残した記録は、沈黙することなく真実を語ってくれました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "……今回も、お見事でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "お疲れ様でした、先生"
+    }
+  ],
+  "wallpapers": [
+    {
+      "name": "久世グループ研修施設・外観",
+      "resolution": "1920x1080",
+      "file": "case02_bg_facility.png",
+      "path": "assets/backgrounds/case02/case02_bg_facility.png"
+    },
+    {
+      "name": "久世グループ研修施設・外観",
+      "resolution": "2560x1440",
+      "file": "case02_bg_facility.png",
+      "path": "assets/wallpapers/2560x1440/case02_bg_facility.png"
+    },
+    {
+      "name": "久世グループ研修施設・外観",
+      "resolution": "3840x2160",
+      "file": "case02_bg_facility.png",
+      "path": "assets/wallpapers/3840x2160/case02_bg_facility.png"
+    },
+    {
+      "name": "久世グループ研修施設・資料保管室",
+      "resolution": "1920x1080",
+      "file": "case02_bg_archive.png",
+      "path": "assets/backgrounds/case02/case02_bg_archive.png"
+    },
+    {
+      "name": "久世グループ研修施設・資料保管室",
+      "resolution": "2560x1440",
+      "file": "case02_bg_archive.png",
+      "path": "assets/wallpapers/2560x1440/case02_bg_archive.png"
+    },
+    {
+      "name": "久世グループ研修施設・資料保管室",
+      "resolution": "3840x2160",
+      "file": "case02_bg_archive.png",
+      "path": "assets/wallpapers/3840x2160/case02_bg_archive.png"
+    },
+    {
+      "name": "久世グループ研修施設・会議室",
+      "resolution": "1920x1080",
+      "file": "case02_bg_meeting.png",
+      "path": "assets/backgrounds/case02/case02_bg_meeting.png"
+    },
+    {
+      "name": "久世グループ研修施設・会議室",
+      "resolution": "2560x1440",
+      "file": "case02_bg_meeting.png",
+      "path": "assets/wallpapers/2560x1440/case02_bg_meeting.png"
+    },
+    {
+      "name": "久世グループ研修施設・会議室",
+      "resolution": "3840x2160",
+      "file": "case02_bg_meeting.png",
+      "path": "assets/wallpapers/3840x2160/case02_bg_meeting.png"
+    }
+  ],
+  "contextLabel": "施設外からの出入り"
+}
