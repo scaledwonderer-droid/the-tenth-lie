@@ -23,6 +23,9 @@ export class GameController {
     if (unlockedMigration) this.persist();
     this.typingTimer = null;
     this.toastTimer = null;
+    this.testimonyTransitioning = false;
+    this.testimonyTransitionToken = 0;
+    this.testimonyPortraitCache = new Map();
     if (!this.cases[this.state.currentCase]) {
       this.state.currentCase = null;
       this.state.screen = "title";
@@ -39,6 +42,7 @@ export class GameController {
       const actionNode = event.target.closest("[data-action]");
       if (actionNode) {
         const action = actionNode.dataset.action;
+        if (this.testimonyTransitioning && action === "advance") return;
         this.audio.playSe(action === "confirm-accusation" ? "confirm" : "select");
         this.handleAction(action, actionNode);
         return;
@@ -77,6 +81,7 @@ export class GameController {
       if (event.key !== "Enter" && event.code !== "Space") return;
       if (event.target && ["BUTTON","SELECT","INPUT","TEXTAREA"].includes(event.target.tagName)) return;
       if (["dialogue","testimony","defeat"].includes(this.state.screen)) {
+        if (this.testimonyTransitioning) return;
         event.preventDefault();
         this.audio.unlock();
         this.advance();
@@ -137,6 +142,7 @@ export class GameController {
   }
 
   render() {
+    if (this.testimonyTransitioning && this.state.screen !== "testimony") this.cancelTestimonyTransition();
     this.stopTyping();
     this.shouldAnimateTransition = this.lastRenderedScreen !== this.state.screen;
     if (this.state.screen === "title") this.renderTitle();
@@ -301,6 +307,7 @@ export class GameController {
   }
 
   advance() {
+    if (this.testimonyTransitioning) return;
     const screen = this.state.screen;
     if (screen === "dialogue") {
       if (this.revealTyping()) return;
@@ -338,7 +345,7 @@ export class GameController {
         this.state.suspectIndex += 1;
         this.state.testimonyIndex = 0;
         this.persist();
-        this.updateTestimonyLine();
+        this.transitionTestimonySuspect().catch(error => this.recoverTestimonyTransition(error));
         return;
       } else {
         this.state.dialogueKind = "lead";
@@ -579,22 +586,246 @@ export class GameController {
     const suspect = data && data.suspects[this.state.suspectIndex];
     if (!suspect) return this.render();
     this.stopTyping();
-    const person = this.character(suspect.id);
-    const image = this.root.querySelector(".dialogue-portrait.is-suspect");
+    const text = this.root.querySelector("[data-typewriter]");
+    const count = this.root.querySelector("[data-testimony-count]");
+    if (!text || !count) return this.render();
+    text.textContent = suspect.statement[this.state.testimonyIndex] || "";
+    count.textContent = "供述　" + (this.state.testimonyIndex + 1) + " / " + suspect.statement.length;
+    this.startTyping();
+  }
+
+  preloadPortrait(path) {
+    if (!path) return Promise.resolve({ ok: false, image: null });
+    if (this.testimonyPortraitCache.has(path)) return this.testimonyPortraitCache.get(path);
+
+    const pending = new Promise(resolve => {
+      const image = new Image();
+      image.decoding = "async";
+      let settled = false;
+      const finish = result => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        image.onload = null;
+        image.onerror = null;
+        resolve(result);
+      };
+      const timer = window.setTimeout(() => finish({ ok: false, image: null }), 6000);
+      image.onload = async () => {
+        try {
+          if (typeof image.decode === "function") await image.decode();
+          finish({ ok: image.naturalWidth > 0, image: image.naturalWidth > 0 ? image : null });
+        } catch (_) {
+          finish({ ok: false, image: null });
+        }
+      };
+      image.onerror = () => finish({ ok: false, image: null });
+      image.src = path;
+      if (image.complete && image.naturalWidth > 0) {
+        Promise.resolve().then(image.onload);
+      }
+    }).then(result => {
+      if (!result.ok && this.testimonyPortraitCache.get(path) === pending) this.testimonyPortraitCache.delete(path);
+      return result;
+    });
+    this.testimonyPortraitCache.set(path, pending);
+    return pending;
+  }
+
+  preloadNextTestimonyPortrait() {
+    const suspects = this.case()?.suspects || [];
+    const next = suspects[this.state.suspectIndex + 1];
+    if (!next) return;
+    const person = this.character(next.id);
+    if (person.portrait) this.preloadPortrait(person.portrait).catch(() => {});
+  }
+
+  waitForImageReady(image, timeoutMs = 6000) {
+    return new Promise(resolve => {
+      let settled = false;
+      const finish = ok => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        image.removeEventListener("load", onLoad);
+        image.removeEventListener("error", onError);
+        resolve(ok);
+      };
+      const onError = () => finish(false);
+      const onLoad = async () => {
+        try {
+          if (typeof image.decode === "function") await image.decode();
+          finish(image.naturalWidth > 0);
+        } catch (_) {
+          finish(false);
+        }
+      };
+      const timer = window.setTimeout(() => finish(false), timeoutMs);
+      image.addEventListener("load", onLoad, { once: true });
+      image.addEventListener("error", onError, { once: true });
+      if (image.complete) {
+        if (image.naturalWidth > 0) Promise.resolve().then(onLoad);
+        else finish(false);
+      }
+    });
+  }
+
+  waitForTransition(element, durationMs) {
+    if (!element) return new Promise(resolve => window.setTimeout(resolve, durationMs));
+    return new Promise(resolve => {
+      let settled = false;
+      const finish = () => {
+        if (settled) return;
+        settled = true;
+        window.clearTimeout(timer);
+        element.removeEventListener("transitionend", onEnd);
+        resolve();
+      };
+      const onEnd = event => {
+        if (event.target === element && event.propertyName === "opacity") finish();
+      };
+      const timer = window.setTimeout(finish, durationMs + 60);
+      element.addEventListener("transitionend", onEnd);
+    });
+  }
+
+  delay(ms) {
+    return new Promise(resolve => window.setTimeout(resolve, ms));
+  }
+
+  async transitionTestimonySuspect() {
+    const token = ++this.testimonyTransitionToken;
+    const isCurrent = () => token === this.testimonyTransitionToken && this.state.screen === "testimony";
+    this.testimonyTransitioning = true;
+    this.stopTyping();
+
+    const suspect = this.case()?.suspects[this.state.suspectIndex];
+    const person = suspect && this.character(suspect.id);
+    const portrait = this.root.querySelector(".dialogue-portrait.is-suspect");
+    const panel = this.root.querySelector(".testimony-panel");
     const speaker = this.root.querySelector(".speaker-name");
     const text = this.root.querySelector("[data-typewriter]");
-    const heading = this.root.querySelector(".testimony-heading-row");
     const meta = this.root.querySelector(".profile-inline");
+    const heading = this.root.querySelector(".testimony-heading-row");
+    const nextButton = this.root.querySelector('[data-action="advance"]');
     const count = this.root.querySelector("[data-testimony-count]");
-    if (!image || !speaker || !text || !heading || !meta) return this.render();
-    if (image.getAttribute("src") !== person.portrait) image.setAttribute("src", person.portrait);
+
+    if (!suspect || !person || !portrait || !panel || !speaker || !text || !meta || !heading || !count) {
+      this.testimonyTransitioning = false;
+      this.render();
+      return;
+    }
+
+    panel.classList.add("testimony-transitioning");
+    panel.setAttribute("aria-busy", "true");
+    if (nextButton) nextButton.disabled = true;
+    speaker.textContent = "";
+    text.textContent = "";
+    meta.textContent = "";
+    heading.querySelector("span:first-child").textContent = "";
+    heading.querySelector("span:last-child").textContent = "";
+    count.textContent = "";
+
+    portrait.classList.add("portrait-transition-out");
+    await this.waitForTransition(portrait, 200);
+    if (!isCurrent()) return;
+
+    portrait.classList.remove("portrait-transition-out");
+    portrait.classList.add("portrait-transition-in");
+    await this.delay(150);
+    if (!isCurrent()) return;
+
+    let loaded = await this.preloadPortrait(person.portrait);
+    if (!isCurrent()) return;
+    if (!loaded.ok) loaded = await this.preloadPortrait(person.portrait); // one bounded retry after a preload failure
+    if (!isCurrent()) return;
+
+    let imageReady = false;
+    if (loaded.ok) {
+      portrait.classList.remove("portrait-load-failed");
+      portrait.src = person.portrait;
+      imageReady = await this.waitForImageReady(portrait);
+    }
+    if (!isCurrent()) return;
+
+    if (imageReady) {
+      void portrait.offsetWidth;
+      await new Promise(resolve => window.requestAnimationFrame(resolve));
+      if (!isCurrent()) return;
+      portrait.classList.add("portrait-transition-ready");
+      await this.waitForTransition(portrait, 300);
+    } else {
+      portrait.removeAttribute("src");
+      portrait.classList.add("portrait-load-failed");
+    }
+    if (!isCurrent()) return;
+
+    portrait.classList.remove("portrait-transition-in", "portrait-transition-ready", "portrait-transition-out");
     speaker.textContent = person.name;
-    text.textContent = suspect.statement[this.state.testimonyIndex] || "";
-    heading.querySelector("span:first-child").textContent = "容疑者 " + String(suspect.number).padStart(2, "0") + " / " + String(data.suspects.length).padStart(2, "0");
-    heading.querySelector("span:last-child").textContent = "供述　" + (this.state.testimonyIndex + 1) + " / " + suspect.statement.length;
     meta.innerHTML = '<span>' + escapeHTML(suspect.age) + '歳</span><span>' + escapeHTML(suspect.occupation) + '</span><span>被害者との関係：' + escapeHTML(suspect.relationship) + '</span>';
-    if (count) count.textContent = "供述　" + (this.state.testimonyIndex + 1) + " / " + suspect.statement.length;
+    heading.querySelector("span:first-child").textContent = "容疑者 " + String(suspect.number).padStart(2, "0") + " / " + String(this.case().suspects.length).padStart(2, "0");
+    heading.querySelector("span:last-child").textContent = "供述　1 / " + suspect.statement.length;
+    count.textContent = "供述　1 / " + suspect.statement.length;
+
+    await this.delay(200);
+    if (!isCurrent()) return;
+    text.textContent = suspect.statement[0] || "";
+    panel.classList.remove("testimony-transitioning");
+    panel.removeAttribute("aria-busy");
+    if (nextButton) nextButton.disabled = false;
+    this.testimonyTransitioning = false;
     this.startTyping();
+    this.preloadNextTestimonyPortrait();
+  }
+
+  cancelTestimonyTransition() {
+    this.testimonyTransitionToken += 1;
+    this.testimonyTransitioning = false;
+    const panel = this.root.querySelector(".testimony-panel");
+    const portrait = this.root.querySelector(".dialogue-portrait.is-suspect");
+    const button = this.root.querySelector('[data-action="advance"]');
+    if (panel) {
+      panel.classList.remove("testimony-transitioning");
+      panel.removeAttribute("aria-busy");
+    }
+    if (portrait) portrait.classList.remove("portrait-transition-out", "portrait-transition-in", "portrait-transition-ready");
+    if (button) button.disabled = false;
+  }
+
+  recoverTestimonyTransition(error) {
+    if (!this.testimonyTransitioning || this.state.screen !== "testimony") return;
+    console.error("供述中の人物切り替えを完了できませんでした", error);
+    const suspect = this.case()?.suspects[this.state.suspectIndex];
+    const person = suspect && this.character(suspect.id);
+    const portrait = this.root.querySelector(".dialogue-portrait.is-suspect");
+    const panel = this.root.querySelector(".testimony-panel");
+    const speaker = this.root.querySelector(".speaker-name");
+    const text = this.root.querySelector("[data-typewriter]");
+    const meta = this.root.querySelector(".profile-inline");
+    const heading = this.root.querySelector(".testimony-heading-row");
+    const count = this.root.querySelector("[data-testimony-count]");
+    const nextButton = this.root.querySelector('[data-action="advance"]');
+    if (portrait) {
+      portrait.removeAttribute("src");
+      portrait.classList.remove("portrait-transition-out", "portrait-transition-in", "portrait-transition-ready");
+      portrait.classList.add("portrait-load-failed");
+    }
+    if (person && suspect && speaker && text && meta && heading && count) {
+      speaker.textContent = person.name;
+      meta.innerHTML = '<span>' + escapeHTML(suspect.age) + '歳</span><span>' + escapeHTML(suspect.occupation) + '</span><span>被害者との関係：' + escapeHTML(suspect.relationship) + '</span>';
+      heading.querySelector("span:first-child").textContent = "容疑者 " + String(suspect.number).padStart(2, "0") + " / " + String(this.case().suspects.length).padStart(2, "0");
+      heading.querySelector("span:last-child").textContent = "供述　1 / " + suspect.statement.length;
+      count.textContent = "供述　1 / " + suspect.statement.length;
+      text.textContent = suspect.statement[0] || "";
+    }
+    if (panel) {
+      panel.classList.remove("testimony-transitioning");
+      panel.removeAttribute("aria-busy");
+    }
+    if (nextButton) nextButton.disabled = false;
+    this.testimonyTransitioning = false;
+    this.startTyping();
+    this.preloadNextTestimonyPortrait();
   }
 
   updateDefeatLine() {
@@ -643,6 +874,7 @@ export class GameController {
           '<div class="dialogue-controls"><span class="advance-hint">クリック・タップ・Enter・Spaceで進む</span><button class="primary-button" data-action="advance">次へ　›</button></div>' +
         '</section>' +
       '</div></div>', data.backgrounds.interview);
+    this.preloadNextTestimonyPortrait();
   }
 
   currentSuspect() {

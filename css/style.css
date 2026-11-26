@@ -110,6 +110,11 @@ a { color: inherit; }
 .profile-inline { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-family: sans-serif; font-size: .8rem; }
 .dialogue-portrait.is-assistant { width: 100%; }
 .dialogue-portrait.is-suspect { width: 100%; }
+.dialogue-portrait.is-suspect { opacity: 1; transition: opacity 200ms ease; }
+.dialogue-portrait.is-suspect.portrait-transition-out,
+.dialogue-portrait.is-suspect.portrait-transition-in:not(.portrait-transition-ready) { opacity: 0; }
+.dialogue-portrait.is-suspect.portrait-transition-in { transition-duration: 300ms; }
+.dialogue-portrait.is-suspect.portrait-load-failed { visibility: hidden; }
 .deduction-page { min-height: 100vh; min-height: 100dvh; }
 .deduction-layout { display: grid; grid-template-columns: minmax(190px, .8fr) minmax(350px, 1.25fr) minmax(360px, 1.18fr); gap: 14px; min-height: min(72vh, 790px); }
 .deduction-column { min-width: 0; display: flex; flex-direction: column; }
