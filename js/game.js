@@ -13,6 +13,14 @@ export class GameController {
     this.characters = characters || {};
     this.audio = audio;
     this.state = loadState();
+    let unlockedMigration = false;
+    this.caseList.forEach(item => {
+      if (item.unlocksAfter && this.state.solvedCases.includes(item.unlocksAfter) && !this.state.unlockedCases.includes(item.id)) {
+        this.state.unlockedCases.push(item.id);
+        unlockedMigration = true;
+      }
+    });
+    if (unlockedMigration) this.persist();
     this.typingTimer = null;
     this.toastTimer = null;
     if (!this.cases[this.state.currentCase]) {
@@ -299,6 +307,9 @@ export class GameController {
       const lines = this.sequence();
       if (this.state.dialogueIndex + 1 < lines.length) {
         this.state.dialogueIndex += 1;
+        this.persist();
+        this.updateDialogueLine();
+        return;
       } else if (this.state.dialogueKind === "intro") {
         this.state.screen = "testimony";
         this.state.suspectIndex = 0;
@@ -320,9 +331,15 @@ export class GameController {
       const suspect = data.suspects[this.state.suspectIndex];
       if (this.state.testimonyIndex + 1 < suspect.statement.length) {
         this.state.testimonyIndex += 1;
+        this.persist();
+        this.updateTestimonyLine();
+        return;
       } else if (this.state.suspectIndex + 1 < data.suspects.length) {
         this.state.suspectIndex += 1;
         this.state.testimonyIndex = 0;
+        this.persist();
+        this.updateTestimonyLine();
+        return;
       } else {
         this.state.dialogueKind = "lead";
         this.state.dialogueIndex = 0;
@@ -335,7 +352,12 @@ export class GameController {
     if (screen === "defeat") {
       if (this.revealTyping()) return;
       const lines = this.case().defeat || [];
-      if (this.state.dialogueIndex + 1 < lines.length) this.state.dialogueIndex += 1;
+      if (this.state.dialogueIndex + 1 < lines.length) {
+        this.state.dialogueIndex += 1;
+        this.persist();
+        this.updateDefeatLine();
+        return;
+      }
       else {
         this.state.screen = "gameOver";
         this.state.dialogueIndex = 0;
@@ -360,22 +382,23 @@ export class GameController {
 
   chooseSuspect(id) {
     if (!this.case().suspects.some(item => item.id === id)) return;
+    if (this.state.selectedSuspectId === id) return;
     this.state.selectedSuspectId = id;
     this.persist();
-    this.render();
+    this.updateDeductionSuspect();
   }
 
   chooseEvidence(id) {
     if (!this.case().evidence.some(item => item.id === id)) return;
     this.state.selectedEvidenceId = id;
     this.persist();
-    this.render();
+    this.updateDeductionEvidence();
   }
 
   setRightTab(tab) {
     this.state.rightTab = tab === "evidence" ? "evidence" : "overview";
     this.persist();
-    this.render();
+    this.updateDeductionPanel();
   }
 
   beginAccusation() {
@@ -485,7 +508,7 @@ export class GameController {
       const disabled = unlocked ? "" : " disabled";
       return '<button class="case-card panel" data-action="open-case" data-case-id="' + escapeHTML(item.id) + '"' + disabled + '>' +
         '<span class="case-status"><i class="status-dot ' + dot + '"></i>' + status + '</span>' +
-        '<span class="case-card-title"><span class="case-number">CASE ' + String(item.number).padStart(2, "0") + '</span><span class="case-name">' + escapeHTML(item.title) + '</span></span>' +
+        '<span class="case-card-title"><span class="case-number">CASE ' + String(item.number).padStart(2, "0") + '</span><span class="case-name">' + escapeHTML(item.title) + '</span>' + (item.englishTitle ? '<span class="small muted">' + escapeHTML(item.englishTitle) + '</span>' : '') + '</span>' +
         '<span class="small muted">' + (solved ? "もう一度プレイする" : unlocked ? "事件を開始する" : "前の事件を解決すると解放") + '</span>' +
       '</button>';
     }).join("");
@@ -500,6 +523,89 @@ export class GameController {
   linePortrait(line) {
     if (!line || !line.portrait) return null;
     return this.character(line.portrait);
+  }
+
+  updateDialogueLine() {
+    const data = this.case();
+    const line = this.visibleLine();
+    if (!data || !line) return this.render();
+    this.stopTyping();
+    const background = data.backgrounds[line.background] || data.backgrounds.office;
+    this.setBackground(background);
+    const scene = document.getElementById("sceneBackground");
+    if (scene) scene.classList.toggle("effect-darken", line.effect === "darken");
+    const speaker = this.root.querySelector(".speaker-name");
+    const count = this.root.querySelector(".dialogue-count");
+    const text = this.root.querySelector("[data-typewriter]");
+    if (!speaker || !count || !text) return this.render();
+    speaker.textContent = this.characterName(line.speaker) || line.speaker || "助手";
+    const lines = this.sequence();
+    count.textContent = (this.state.dialogueIndex + 1) + " / " + lines.length;
+    text.textContent = line.text || "";
+
+    const stage = this.root.querySelector(".dialogue-stage");
+    const panel = this.root.querySelector(".dialogue-panel");
+    const currentWrap = stage && stage.querySelector(".dialogue-portrait-wrap");
+    const portrait = this.linePortrait(line);
+    if (portrait && portrait.portrait) {
+      let wrap = currentWrap;
+      if (!wrap) {
+        wrap = document.createElement("div");
+        stage.insertBefore(wrap, panel);
+      }
+      wrap.className = "dialogue-portrait-wrap" + (line.position === "right" ? " portrait-right" : "");
+      let image = wrap.querySelector(".dialogue-portrait");
+      if (!image) {
+        image = document.createElement("img");
+        image.className = "dialogue-portrait";
+        image.alt = "";
+        wrap.appendChild(image);
+      }
+      if (image.getAttribute("src") !== portrait.portrait) image.setAttribute("src", portrait.portrait);
+      panel.classList.toggle("portrait-right-panel", line.position === "right");
+      panel.classList.remove("without-portrait");
+    } else {
+      if (currentWrap) currentWrap.remove();
+      panel.classList.remove("portrait-right-panel");
+      panel.classList.add("without-portrait");
+    }
+    if (line.bgm) this.audio.playBgm(line.bgm);
+    if (line.se) this.audio.playSe(line.se);
+    this.startTyping();
+  }
+
+  updateTestimonyLine() {
+    const data = this.case();
+    const suspect = data && data.suspects[this.state.suspectIndex];
+    if (!suspect) return this.render();
+    this.stopTyping();
+    const person = this.character(suspect.id);
+    const image = this.root.querySelector(".dialogue-portrait.is-suspect");
+    const speaker = this.root.querySelector(".speaker-name");
+    const text = this.root.querySelector("[data-typewriter]");
+    const heading = this.root.querySelector(".testimony-heading-row");
+    const meta = this.root.querySelector(".profile-inline");
+    const count = this.root.querySelector("[data-testimony-count]");
+    if (!image || !speaker || !text || !heading || !meta) return this.render();
+    if (image.getAttribute("src") !== person.portrait) image.setAttribute("src", person.portrait);
+    speaker.textContent = person.name;
+    text.textContent = suspect.statement[this.state.testimonyIndex] || "";
+    heading.querySelector("span:first-child").textContent = "容疑者 " + String(suspect.number).padStart(2, "0") + " / " + String(data.suspects.length).padStart(2, "0");
+    heading.querySelector("span:last-child").textContent = "供述　" + (this.state.testimonyIndex + 1) + " / " + suspect.statement.length;
+    meta.innerHTML = '<span>' + escapeHTML(suspect.age) + '歳</span><span>' + escapeHTML(suspect.occupation) + '</span><span>被害者との関係：' + escapeHTML(suspect.relationship) + '</span>';
+    if (count) count.textContent = "供述　" + (this.state.testimonyIndex + 1) + " / " + suspect.statement.length;
+    this.startTyping();
+  }
+
+  updateDefeatLine() {
+    this.stopTyping();
+    const line = this.visibleLine();
+    const text = this.root.querySelector("[data-typewriter]");
+    const count = this.root.querySelector(".dialogue-count");
+    if (!line || !text || !count) return this.render();
+    text.textContent = line.text || "";
+    count.textContent = (this.state.dialogueIndex + 1) + " / " + this.case().defeat.length;
+    this.startTyping();
   }
 
   renderDialogue() {
@@ -528,7 +634,7 @@ export class GameController {
     const text = suspect.statement[this.state.testimonyIndex] || "";
     const profileText = "容疑者 " + String(suspect.number).padStart(2, "0") + " / " + String(data.suspects.length).padStart(2, "0");
     this.mount('<div class="dialogue-screen">' + this.header() +
-      '<div class="testimony-heading"><div class="testimony-heading-row"><span>' + profileText + '</span><span>供述　' + (this.state.testimonyIndex + 1) + ' / ' + suspect.statement.length + '</span></div></div>' +
+      '<div class="testimony-heading"><div class="testimony-heading-row"><span>' + profileText + '</span><span data-testimony-count>供述　' + (this.state.testimonyIndex + 1) + ' / ' + suspect.statement.length + '</span></div></div>' +
       '<div class="dialogue-stage">' +
         '<div class="dialogue-portrait-wrap"><img class="dialogue-portrait is-suspect" src="' + escapeHTML(person.portrait) + '" alt=""></div>' +
         '<section class="dialogue-panel panel testimony-panel" data-advance>' +
@@ -544,6 +650,83 @@ export class GameController {
     return data.suspects.find(item => item.id === this.state.selectedSuspectId) || data.suspects[0];
   }
 
+  personDetailMarkup(active) {
+    const person = this.character(active.id);
+    return '<img class="person-detail-image" src="' + escapeHTML(person.portrait) + '" alt="">' +
+      '<div class="person-detail-shade"></div>' +
+      '<div class="person-detail-copy"><p class="eyebrow">SUSPECT ' + String(active.number).padStart(2, "0") + ' / 10</p>' +
+        '<h2 class="person-detail-name">' + escapeHTML(person.name) + '</h2>' +
+        '<div class="person-facts"><span>' + escapeHTML(active.age) + '歳</span><span>' + escapeHTML(active.occupation) + '</span><span>' + escapeHTML(active.relationship) + '</span></div>' +
+        '<p class="person-bio">' + escapeHTML(active.publicProfile) + '</p>' +
+        '<div class="statement-full">' + escapeHTML(active.statement.join("\n\n")) + '</div>' +
+      '</div>';
+  }
+
+  deductionSummaryMarkup(data) {
+    const contextLabel = data.contextLabel || "隔離状況";
+    const context = data.incidentContext || "嵐で島と本土が孤立";
+    const summary = data.deductionSummary || "晩餐会の翌朝、書斎で久世宗一郎が発見された。扉と窓は施錠され、机には飲みかけの紅茶が残されていた。";
+    return '<div class="case-dossier">' +
+      '<h3>' + escapeHTML(data.title) + '</h3>' +
+      '<div class="victim-summary">' +
+        '<span>発生場所<br><strong>' + escapeHTML(data.location) + '</strong></span>' +
+        '<span>被害者<br><strong>' + escapeHTML(data.victim.name) + '・' + escapeHTML(data.victim.age) + '歳</strong></span>' +
+        '<span>死因<br><strong>' + escapeHTML(data.victim.cause) + '</strong></span>' +
+        '<span>推定死亡時刻<br><strong>' + escapeHTML(data.victim.estimatedTime) + '</strong></span>' +
+        '<span>遺体発見<br><strong>' + escapeHTML(data.victim.foundAt) + '</strong></span>' +
+        '<span>' + escapeHTML(contextLabel) + '<br><strong>' + escapeHTML(context) + '</strong></span>' +
+      '</div>' +
+      '<p class="small muted" style="line-height:1.65">' + escapeHTML(summary) + '</p>' +
+    '</div>';
+  }
+
+  deductionPanelMarkup(data) {
+    const controls = '<div class="dossier-controls">' +
+      '<button class="' + (this.state.rightTab === "overview" ? "primary-button" : "secondary-button") + '" data-action="right-tab" data-tab="overview">事件概要</button>' +
+      '<button class="' + (this.state.rightTab === "evidence" ? "primary-button" : "secondary-button") + '" data-action="right-tab" data-tab="evidence">現場資料</button>' +
+    '</div>';
+    if (this.state.rightTab === "overview") {
+      return controls + this.deductionSummaryMarkup(data) +
+        '<div class="notice" style="margin:12px">10人の容疑者のプロフィールと供述は、左の一覧から何度でも確認できます。</div>' +
+        '<div style="padding:10px 15px 16px"><button class="secondary-button" data-action="right-tab" data-tab="evidence">現場資料を確認する</button></div>';
+    }
+    const evidenceRows = data.evidence.map(item =>
+      '<button class="evidence-row ' + (item.id === this.state.selectedEvidenceId ? "active" : "") + '" data-action="choose-evidence" data-evidence-id="' + escapeHTML(item.id) + '">' + escapeHTML(item.title) + '</button>'
+    ).join("");
+    const selected = data.evidence.find(item => item.id === this.state.selectedEvidenceId) || data.evidence[0];
+    return controls + '<div class="case-dossier"><h3>事件資料　' + data.evidence.length + '件</h3><p class="small muted">文章資料を選択すると詳細を表示します。</p></div>' +
+      '<div class="evidence-list">' + evidenceRows + '</div>' +
+      '<div class="evidence-detail"><h4 class="evidence-detail-title">' + escapeHTML(selected.title) + '</h4><div data-evidence-text>' + escapeHTML(selected.text) + '</div></div>' +
+      '<div style="padding:0 12px 12px"><button class="text-button" data-action="right-tab" data-tab="overview">事件概要へ戻る</button></div>';
+  }
+
+  updateDeductionSuspect() {
+    const active = this.currentSuspect();
+    const rows = this.root.querySelectorAll(".suspect-row");
+    const detail = this.root.querySelector(".person-detail");
+    if (!detail || !rows.length) return this.render();
+    rows.forEach(row => row.classList.toggle("active", row.dataset.suspectId === active.id));
+    detail.innerHTML = this.personDetailMarkup(active);
+  }
+
+  updateDeductionEvidence() {
+    if (this.state.rightTab !== "evidence") return;
+    const data = this.case();
+    const selected = data.evidence.find(item => item.id === this.state.selectedEvidenceId) || data.evidence[0];
+    const detail = this.root.querySelector("[data-evidence-text]");
+    if (!detail) return this.render();
+    this.root.querySelectorAll(".evidence-row").forEach(row => row.classList.toggle("active", row.dataset.evidenceId === selected.id));
+    const title = detail.parentElement.querySelector(".evidence-detail-title");
+    if (title) title.textContent = selected.title;
+    detail.textContent = selected.text;
+  }
+
+  updateDeductionPanel() {
+    const target = this.root.querySelector("[data-deduction-panel]");
+    if (!target) return this.render();
+    target.innerHTML = this.deductionPanelMarkup(this.case());
+  }
+
   renderDeduction() {
     const data = this.case();
     const active = this.currentSuspect();
@@ -555,33 +738,7 @@ export class GameController {
         '<span><span class="suspect-row-name">' + String(item.number).padStart(2, "0") + '　' + escapeHTML(person.name) + '</span><span class="suspect-row-role">' + escapeHTML(item.occupation) + '</span></span>' +
       '</button>';
     }).join("");
-    const evidenceRows = data.evidence.map(item =>
-      '<button class="evidence-row ' + (item.id === this.state.selectedEvidenceId ? "active" : "") + '" data-action="choose-evidence" data-evidence-id="' + escapeHTML(item.id) + '">' + escapeHTML(item.title) + '</button>'
-    ).join("");
-    const selectedEvidence = data.evidence.find(item => item.id === this.state.selectedEvidenceId) || data.evidence[0];
-    const summary = '<div class="case-dossier">' +
-      '<h3>' + escapeHTML(data.title) + '</h3>' +
-      '<div class="victim-summary">' +
-        '<span>発生場所<br><strong>' + escapeHTML(data.location) + '</strong></span>' +
-        '<span>被害者<br><strong>' + escapeHTML(data.victim.name) + '・' + escapeHTML(data.victim.age) + '歳</strong></span>' +
-        '<span>死因<br><strong>' + escapeHTML(data.victim.cause) + '</strong></span>' +
-        '<span>推定死亡時刻<br><strong>' + escapeHTML(data.victim.estimatedTime) + '</strong></span>' +
-        '<span>遺体発見<br><strong>' + escapeHTML(data.victim.foundAt) + '</strong></span>' +
-        '<span>隔離状況<br><strong>嵐で島と本土が孤立</strong></span>' +
-      '</div>' +
-      '<p class="small muted" style="line-height:1.65">晩餐会の翌朝、書斎で久世宗一郎が発見された。扉と窓は施錠され、机には飲みかけの紅茶が残されていた。</p>' +
-    '</div>';
-    let rightContent = "";
-    if (this.state.rightTab === "overview") {
-      rightContent = summary +
-        '<div class="notice" style="margin:12px">10人の容疑者のプロフィールと供述は、左の一覧から何度でも確認できます。</div>' +
-        '<div style="padding:10px 15px 16px"><button class="secondary-button" data-action="right-tab" data-tab="evidence">現場資料を確認する</button></div>';
-    } else {
-      rightContent = '<div class="case-dossier"><h3>事件資料　' + data.evidence.length + '件</h3><p class="small muted">文章資料を選択すると詳細を表示します。</p></div>' +
-        '<div class="evidence-list">' + evidenceRows + '</div>' +
-        '<div class="evidence-detail"><h4 class="evidence-detail-title">' + escapeHTML(selectedEvidence.title) + '</h4>' + escapeHTML(selectedEvidence.text) + '</div>' +
-        '<div style="padding:0 12px 12px"><button class="text-button" data-action="right-tab" data-tab="overview">事件概要へ戻る</button></div>';
-    }
+    const rightContent = this.deductionPanelMarkup(data);
     this.mount(this.header() +
       '<section class="screen-content deduction-page">' +
         '<div class="page-heading"><div><p class="eyebrow">FREE DEDUCTION</p><h1 class="section-title">自由推理</h1><p class="section-subtitle">供述と事件資料を自由に読み返せます。</p></div></div>' +
@@ -599,11 +756,7 @@ export class GameController {
               '</div>' +
             '</div>' +
           '</section>' +
-          '<section class="deduction-column panel"><div class="column-heading">事件資料</div>' +
-            '<div class="dossier-controls">' +
-              '<button class="' + (this.state.rightTab === "overview" ? "primary-button" : "secondary-button") + '" data-action="right-tab" data-tab="overview">事件概要</button>' +
-              '<button class="' + (this.state.rightTab === "evidence" ? "primary-button" : "secondary-button") + '" data-action="right-tab" data-tab="evidence">現場資料</button>' +
-            '</div>' + rightContent +
+          '<section class="deduction-column panel"><div class="column-heading">事件資料</div><div data-deduction-panel>' + rightContent + '</div>' +
           '</section>' +
         '</div>' +
         '<div class="deduction-footer"><p>閲覧回数に制限はありません。推理がまとまったら指名へ進んでください。</p><button class="primary-button" data-action="accuse">犯人を指名する</button></div>' +
@@ -633,6 +786,8 @@ export class GameController {
     const accomplice = data.suspects.find(item => item.id === this.state.accuseAccomplice);
     let content = "";
     let stepNum = step === "culprit" ? 1 : step === "accomplice" ? 2 : 3;
+    const prompts = data.accusationPrompts && data.accusationPrompts[step];
+    const promptText = prompts ? prompts.map(escapeHTML).join("<br>") : "犯人と共謀者をそれぞれ選択してください。共謀者がいないと考える場合も選択できます。";
     if (step === "culprit") {
       content = '<label class="form-label" for="culpritSelect">犯人</label><select id="culpritSelect" class="select-field" data-select="culprit">' + this.suspectOptions(this.state.accuseCulprit) + '</select>' +
         '<div class="button-row"><button class="text-button" data-action="return-deduction">推理に戻る</button><button class="primary-button" data-action="accuse-next">次へ　›</button></div>';
@@ -650,7 +805,7 @@ export class GameController {
       '<section class="screen-content">' +
         '<div class="accusation-wrap panel">' +
           '<p class="eyebrow">FINAL ACCUSATION</p><h1 class="section-title">犯人を指名する</h1>' +
-          '<p class="section-subtitle">犯人と共謀者をそれぞれ選択してください。共謀者がいないと考える場合も選択できます。</p>' +
+          '<p class="section-subtitle">' + promptText + '</p>' +
           '<div class="step-indicator"><span class="' + (stepNum >= 1 ? "active" : "") + '"></span><span class="' + (stepNum >= 2 ? "active" : "") + '"></span><span class="' + (stepNum >= 3 ? "active" : "") + '"></span></div>' +
           content +
         '</div>' +
@@ -697,6 +852,7 @@ export class GameController {
           '<div class="case-closed-label">CASE CLOSED</div>' +
           '<p class="case-closed-no">CASE ' + String(data.number).padStart(2, "0") + '</p>' +
           '<h1 class="case-closed-name">' + escapeHTML(data.title) + '</h1>' +
+          (data.englishTitle ? '<p class="small muted">' + escapeHTML(data.englishTitle) + '</p>' : '') +
           '<div class="rule"></div><p class="section-subtitle">事件の真相が明らかになりました。</p>' +
           '<div class="button-row" style="justify-content:center">' +
             (next ? '<button class="primary-button" data-action="next-case">次の事件へ</button>' : "") +
@@ -747,11 +903,12 @@ export class GameController {
         '</div>' +
       '</article>';
     }).join("");
+    const availableResolutions = Array.from(new Set(wallpapers.map(item => item.resolution)));
     this.mount(this.header() +
       '<section class="screen-content">' +
         '<div class="page-heading"><div><p class="eyebrow">WALLPAPERS</p><h1 class="section-title">壁紙ダウンロード</h1><p class="section-subtitle">添付されている解像度の背景画像を配布しています。</p></div><button class="text-button" data-action="back">戻る</button></div>' +
         '<div class="wallpaper-grid">' + cards + '</div>' +
-        '<p class="footer-note">現在収録されている解像度は1920×1080です。</p>' +
+        '<p class="footer-note">現在収録されている解像度：' + escapeHTML(availableResolutions.join("、")) + '</p>' +
       '</section>', this.caseList.length ? this.cases[this.caseList[0].id].backgrounds.office : null);
   }
 
