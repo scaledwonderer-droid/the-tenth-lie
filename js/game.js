@@ -130,6 +130,7 @@ export class GameController {
 
   render() {
     this.stopTyping();
+    this.shouldAnimateTransition = this.lastRenderedScreen !== this.state.screen;
     if (this.state.screen === "title") this.renderTitle();
     else if (this.state.screen === "caseSelect") this.renderCaseSelect();
     else if (this.state.screen === "dialogue") this.renderDialogue();
@@ -151,6 +152,7 @@ export class GameController {
       if (line && line.se) this.audio.playSe(line.se);
       this.startTyping();
     }
+    this.lastRenderedScreen = this.state.screen;
   }
 
   mount(html, backgroundPath) {
@@ -159,9 +161,13 @@ export class GameController {
     const visibleLine = this.visibleLine();
     if (scene) scene.classList.toggle("effect-darken", visibleLine && visibleLine.effect === "darken");
     this.root.innerHTML = html;
-    this.root.classList.remove("screen-enter");
-    void this.root.offsetWidth;
-    this.root.classList.add("screen-enter");
+    if (this.shouldAnimateTransition) {
+      this.root.classList.remove("screen-enter");
+      void this.root.offsetWidth;
+      this.root.classList.add("screen-enter");
+    } else {
+      this.root.classList.remove("screen-enter");
+    }
   }
 
   currentCaseMeta() {
@@ -452,7 +458,7 @@ export class GameController {
     this.setBackground(this.caseList.length ? this.cases[this.caseList[0].id].backgrounds.office : null);
     const hasResume = !!(this.state.resume && this.state.resume.screen);
     this.root.innerHTML =
-      '<section class="title-screen screen-enter">' +
+      '<section class="title-screen ' + (this.shouldAnimateTransition ? "screen-enter" : "") + '">' +
         '<div class="title-brand">' +
           '<img class="title-logo" src="assets/logo/title_logo.png" alt="十人目の嘘 THE TENTH LIE">' +
           '<p class="title-tagline">A MURDER MYSTERY ADVENTURE</p>' +
@@ -675,7 +681,7 @@ export class GameController {
 
   renderGameOver() {
     this.mount(this.header() +
-      '<section class="game-over-panel panel screen-enter">' +
+      '<section class="game-over-panel panel ' + (this.shouldAnimateTransition ? "screen-enter" : "") + '">' +
         '<p class="eyebrow">THE CASE REMAINS UNSOLVED</p><h1 class="game-over-title">GAME OVER</h1>' +
         '<p class="section-subtitle">まだ推理を続けることができます。</p>' +
         '<div class="button-row" style="justify-content:center"><button class="primary-button" data-action="retry">もう一度推理する</button><button class="secondary-button" data-action="go-title">タイトルへ戻る</button></div>' +
@@ -686,7 +692,7 @@ export class GameController {
     const data = this.case();
     const next = this.nextCase();
     this.mount(this.header() +
-      '<section class="case-closed screen-enter">' +
+      '<section class="case-closed ' + (this.shouldAnimateTransition ? "screen-enter" : "") + '">' +
         '<div class="case-closed-card panel">' +
           '<div class="case-closed-label">CASE CLOSED</div>' +
           '<p class="case-closed-no">CASE ' + String(data.number).padStart(2, "0") + '</p>' +
