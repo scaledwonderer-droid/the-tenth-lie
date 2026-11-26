@@ -1,0 +1,72 @@
+@media (max-width: 1100px) {
+  .deduction-layout { grid-template-columns: minmax(170px, .72fr) minmax(300px, 1.2fr) minmax(300px, 1.1fr); }
+  .screen-content { padding-left: 20px; padding-right: 20px; }
+  .dialogue-portrait-wrap { width: 43vw; }
+  .dialogue-panel { width: 67%; }
+}
+@media (max-width: 780px) {
+  .app-header { padding: 12px 15px 8px; }
+  .brand-mini img { width: 120px; max-height: 48px; }
+  .brand-mini span { display: none; }
+  .header-actions { gap: 6px; }
+  .icon-button { width: 38px; height: 38px; }
+  .screen-content { padding: 12px 14px 28px; }
+  .title-screen { grid-template-columns: 1fr; align-content: center; gap: 24px; padding: 6vh 8vw; }
+  .title-logo { width: min(100%, 650px); max-height: 29vh; }
+  .title-tagline { letter-spacing: .26em; font-size: .7rem; }
+  .title-menu { width: min(100%, 420px); margin: 0 auto; padding: 22px; }
+  .title-menu button { min-height: 48px; }
+  .page-heading { align-items: start; flex-direction: column; margin: 12px 0 20px; }
+  .case-list { grid-template-columns: 1fr; }
+  .case-card { min-height: 150px; }
+  .dialogue-screen .app-header { position: relative; }
+  .dialogue-stage { display: flex; flex-direction: column; min-height: calc(100dvh - 64px); }
+  .dialogue-portrait-wrap { position: relative; inset: auto; width: 100%; height: 40vh; min-height: 240px; max-height: 390px; margin-top: auto; }
+  .dialogue-portrait-wrap.portrait-right { right: auto; }
+  .dialogue-portrait { max-height: 100%; max-width: 82vw; }
+  .dialogue-panel, .dialogue-panel.without-portrait { width: calc(100% - 22px); min-height: 210px; margin: -8px auto 12px; padding: 17px 18px 15px; }
+  .dialogue-panel.portrait-right-panel { margin: -8px auto 12px; }
+  .dialogue-text { min-height: 84px; padding: 14px 0 8px; font-size: 1.04rem; line-height: 1.85; }
+  .testimony-heading { width: calc(100% - 28px); padding-top: 8px; }
+  .testimony-heading-row { font-size: .73rem; }
+  .deduction-layout { grid-template-columns: 1fr; min-height: 0; }
+  .deduction-column { min-height: auto; }
+  .suspect-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-height: 300px; }
+  .suspect-row { grid-template-columns: 42px 1fr; gap: 8px; padding: 7px 5px; }
+  .suspect-avatar { width: 42px; height: 48px; }
+  .suspect-row-name { font-size: .82rem; }
+  .suspect-row-role { font-size: .67rem; }
+  .person-detail { min-height: min(67vh, 630px); }
+  .person-detail-copy { padding: 19px; }
+  .person-bio { max-height: 105px; }
+  .statement-full { max-height: 220px; }
+  .case-dossier { padding: 13px 14px 8px; }
+  .evidence-list { max-height: 310px; }
+  .evidence-detail { max-height: 240px; }
+  .deduction-footer { align-items: stretch; flex-direction: column; }
+  .deduction-footer .primary-button { min-height: 50px; }
+  .accusation-wrap { margin: 3vh auto; padding: 24px 20px; }
+  .defeat-screen .dialogue-stage { min-height: calc(100dvh - 64px); }
+  .defeat-pair { height: 42vh; bottom: 210px; gap: 8vw; }
+  .defeat-figure { max-width: 42vw; }
+  .defeat-screen .dialogue-panel { margin-top: -10px; }
+  .game-over-panel { margin: 10vh auto 0; padding: 30px 20px; }
+  .wallpaper-grid { grid-template-columns: 1fr; }
+  .setting-row { grid-template-columns: 1fr 64px; gap: 6px 14px; }
+  .setting-row input { grid-column: 1 / 2; grid-row: 2; }
+  .setting-value { grid-column: 2; grid-row: 1 / 3; }
+  .toggle-row { align-items: start; }
+}
+@media (max-width: 420px) {
+  .app-header { padding-left: 10px; padding-right: 10px; }
+  .header-actions .quiet-button { padding: 9px 10px; font-size: .74rem; }
+  .suspect-list { grid-template-columns: 1fr; max-height: 250px; }
+  .dialogue-meta { align-items: start; }
+  .advance-hint { display: none; }
+  .victim-summary { grid-template-columns: 1fr 1fr; font-size: .71rem; }
+  .button-row { justify-content: stretch; }
+  .button-row button { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
