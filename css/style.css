@@ -20,9 +20,9 @@ button, input, select { font: inherit; }
 button { color: inherit; }
 button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 a { color: inherit; }
-.app-root { position: relative; min-height: 100vh; min-height: 100dvh; isolation: isolate; }
+.app-root { position: relative; z-index: 1; min-height: 100vh; min-height: 100dvh; isolation: isolate; }
 .scene-background {
-  position: fixed; inset: 0; z-index: -2; background-color: #111; background-position: center; background-size: cover; background-repeat: no-repeat;
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; background-color: #111; background-position: center; background-size: cover; background-repeat: no-repeat;
   transition: filter .35s ease;
 }
 .scene-background::before { content: ""; position: absolute; z-index: 0; inset: 0; background-image: var(--previous-image, none); background-position: center; background-size: cover; opacity: 0; }
