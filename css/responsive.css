@@ -4,8 +4,8 @@
   .dialogue-portrait-wrap { width: 43vw; }
   .dialogue-panel { width: 67%; }
   .dialogue-panel.testimony-panel {
-    width: min(74%, 900px);
-    min-height: clamp(230px, 28vh, 270px);
+    width: min(62%, 900px);
+    min-height: clamp(230px, 28vh, 300px);
     margin-right: clamp(24px, 4vw, 48px);
     margin-bottom: clamp(26px, 4vh, 36px);
   }
