@@ -1,0 +1,132 @@
+{
+  "characters": {
+    "assistant": {
+      "id": "assistant",
+      "name": "助手",
+      "portrait": "assets/characters/common/common_assistant.png",
+      "gender": "female"
+    },
+    "unknownFemale": {
+      "id": "unknownFemale",
+      "name": "？？？",
+      "portrait": "assets/characters/common/common_unknown_female.png",
+      "gender": "female"
+    },
+    "unknownMale": {
+      "id": "unknownMale",
+      "name": "？？？",
+      "portrait": "assets/characters/common/common_unknown_male.png",
+      "gender": "male"
+    },
+    "reiji": {
+      "id": "reiji",
+      "name": "久世 怜司",
+      "portrait": "assets/characters/case01/case01_01_reiji.png",
+      "gender": "male",
+      "profile": {
+        "age": 42,
+        "occupation": "会社役員"
+      }
+    },
+    "mikoto": {
+      "id": "mikoto",
+      "name": "久世 美琴",
+      "portrait": "assets/characters/case01/case01_02_mikoto.png",
+      "gender": "female",
+      "profile": {
+        "age": 35,
+        "occupation": "元ピアニスト"
+      }
+    },
+    "saori": {
+      "id": "saori",
+      "name": "久世 沙織",
+      "portrait": "assets/characters/case01/case01_03_saori.png",
+      "gender": "female",
+      "profile": {
+        "age": 39,
+        "occupation": "無職"
+      }
+    },
+    "kurokawa": {
+      "id": "kurokawa",
+      "name": "黒川 修一",
+      "portrait": "assets/characters/case01/case01_04_kurokawa.png",
+      "gender": "male",
+      "profile": {
+        "age": 56,
+        "occupation": "弁護士"
+      }
+    },
+    "shiraishi": {
+      "id": "shiraishi",
+      "name": "白石 冬馬",
+      "portrait": "assets/characters/case01/case01_05_shiraishi.png",
+      "gender": "male",
+      "profile": {
+        "age": 45,
+        "occupation": "医師"
+      }
+    },
+    "amamiya": {
+      "id": "amamiya",
+      "name": "雨宮 栞",
+      "portrait": "assets/characters/case01/case01_06_amamiya.png",
+      "gender": "female",
+      "profile": {
+        "age": 28,
+        "occupation": "小説家"
+      }
+    },
+    "kanzaki": {
+      "id": "kanzaki",
+      "name": "神崎 蓮",
+      "portrait": "assets/characters/case01/case01_07_kanzaki.png",
+      "gender": "male",
+      "profile": {
+        "age": 33,
+        "occupation": "ジャーナリスト"
+      }
+    },
+    "tachibana": {
+      "id": "tachibana",
+      "name": "橘 千尋",
+      "portrait": "assets/characters/case01/case01_08_tachibana.png",
+      "gender": "female",
+      "profile": {
+        "age": 31,
+        "occupation": "秘書"
+      }
+    },
+    "sakaki": {
+      "id": "sakaki",
+      "name": "榊 誠一",
+      "portrait": "assets/characters/case01/case01_09_sakaki.png",
+      "gender": "male",
+      "profile": {
+        "age": 62,
+        "occupation": "執事"
+      }
+    },
+    "minase": {
+      "id": "minase",
+      "name": "水無瀬 凛",
+      "portrait": "assets/characters/case01/case01_10_minase.png",
+      "gender": "female",
+      "profile": {
+        "age": 26,
+        "occupation": "不明"
+      }
+    },
+    "soichiro": {
+      "id": "soichiro",
+      "name": "久世 宗一郎",
+      "portrait": null,
+      "gender": "male",
+      "profile": {
+        "age": 68,
+        "occupation": "会社経営者・資産家"
+      }
+    }
+  }
+}

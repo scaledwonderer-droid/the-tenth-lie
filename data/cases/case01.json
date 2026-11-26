@@ -1,0 +1,1031 @@
+{
+  "id": "case01",
+  "number": 1,
+  "title": "孤島の晩餐会",
+  "location": "孤島の洋館「黒百合館」",
+  "victim": {
+    "name": "久世 宗一郎",
+    "age": 68,
+    "occupation": "会社経営者・資産家",
+    "deathLocation": "黒百合館・書斎",
+    "cause": "毒物による中毒死",
+    "estimatedTime": "午後11時〜翌午前1時",
+    "foundAt": "午前7時",
+    "personId": "soichiro"
+  },
+  "backgrounds": {
+    "office": "assets/backgrounds/common/common_bg_office.png",
+    "defeat": "assets/backgrounds/common/common_bg_defeat.png",
+    "mansion": "assets/backgrounds/case01/case01_bg_mansion.png",
+    "study": "assets/backgrounds/case01/case01_bg_study.png",
+    "interview": "assets/backgrounds/case01/case01_bg_interview.png"
+  },
+  "audio": {},
+  "introduction": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生、新しい事件の依頼が入りました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回の舞台は、本土から離れた小さな島に建つ洋館です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "その名は、黒百合館"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "昨夜、そこで開かれた晩餐会の後、館の主人が遺体となって発見されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "折からの嵐によって、島と本土を結ぶ船は運航を停止していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "事件発生時、島は事実上、外界から隔絶されていたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "館に滞在していたのは、被害者を含めて11人"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そのうち、10人が今回の容疑者です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それでは、事件の詳細をご説明します"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "黒百合館の主人は、久世宗一郎。68歳"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "複数の企業を経営する資産家で、政財界にも広い人脈を持っていた人物です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "昨夜、久世氏は家族や関係者を館に招き、晩餐会を開きました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "招待客には、晩餐会の翌朝に重要な発表を行うと伝えていたそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "その発表が何だったのかは、現在のところ明らかになっていません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "晩餐会は午後10時頃に終了"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "久世氏はその後、自室ではなく書斎へ向かいました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "そして翌朝7時、朝食の時間になっても姿を見せなかったため、執事が書斎を確認しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "mansion",
+      "text": "そこで発見されたのが、久世氏の遺体です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "遺体は書斎の机に突っ伏した状態で発見されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "書斎の扉には鍵がかかっており、窓も内側から施錠されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "執事の榊誠一氏が、管理用の合鍵を使用して扉を開けたと報告しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "遺体に致命的な外傷はありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "死因は、毒物による中毒死"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "推定死亡時刻は、昨夜の午後11時から翌午前1時までの間です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "机の上には、飲みかけの紅茶が残されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "鑑定の結果、ティーカップから毒物が検出されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "一方、紅茶を入れていたティーポットからは、毒物が検出されませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "つまり、紅茶そのものではなく、被害者が使用したカップに毒物が存在していたことになります"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "現場には、ほかにも気になる物品が残されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "study",
+      "text": "こちらが、現在までに確認されている事件資料です"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e01",
+      "title": "資料01　被害者情報",
+      "text": "名前：久世宗一郎\n年齢：68歳\n職業：会社経営者・資産家\n死亡場所：黒百合館・書斎\n死因：毒物による中毒死\n推定死亡時刻：午後11時〜翌午前1時\n遺体発見時刻：午前7時"
+    },
+    {
+      "id": "e02",
+      "title": "資料02　書斎の施錠状況",
+      "text": "発見時、書斎の扉は施錠されていた。\n窓はすべて内側から施錠されていた。\n扉には通常の鍵と管理用の合鍵が存在する。\n通常の鍵は被害者の衣服から発見された。\n管理用の合鍵は執事の榊誠一が保管していた。\n合鍵の貸し出し記録はない。\n扉や窓に破壊された痕跡はない。"
+    },
+    {
+      "id": "e03",
+      "title": "資料03　紅茶とティーカップ",
+      "text": "被害者のティーカップから毒物が検出された。\nティーポットからは毒物が検出されなかった。\n同じティーポットから紅茶を飲んだ人物に異常はなかった。\n被害者専用のティーカップが使用されていた。"
+    },
+    {
+      "id": "e04",
+      "title": "資料04　専用カップの管理記録",
+      "text": "黒百合館では、主人である久世宗一郎専用のティーカップを使用していた。\n晩餐会終了後、使用済みの食器はすべて洗浄された。\n食器管理記録によると、午後10時50分、洗浄済みの専用カップが橘千尋に引き渡されている。\n洗浄後のカップに異常がなかったことは、引き渡し直前に撮影された食器管理用の記録写真で確認されている。写真には、後に毒物が検出された付着箇所も明瞭に写っている。\n引き渡し後、橘千尋はカップを載せたトレーを持ち、厨房から書斎へ向かった。"
+    },
+    {
+      "id": "e05",
+      "title": "資料05　廊下の防犯カメラ",
+      "text": "書斎へ続く廊下には防犯カメラが設置されている。映像は正常に保存され、編集や欠落は確認されていない。\n22:18　久世宗一郎が書斎へ入る\n22:52　橘千尋がティーセットを持って書斎へ向かう\n23:02　橘千尋が書斎から退出する\n23:41　榊誠一が書斎へ入る\n23:49　榊誠一が書斎から退出する\n翌07:00　榊誠一が再び書斎へ入る\n午後10時18分から翌朝7時まで、書斎へ入った人物は被害者、橘千尋、榊誠一のみ。厨房から書斎までの別の防犯カメラにも、橘千尋が移動中に他者と接触した記録はない。"
+    },
+    {
+      "id": "e06",
+      "title": "資料06　置き時計",
+      "text": "書斎の置き時計は、午後11時47分を示した状態で停止していた。\n時計には故障や電池切れは確認されていない。\n時計の背面から微量の血液が検出され、鑑定の結果、血液は榊誠一のものと判明した。\n時計は背面の操作によって停止させられていた。"
+    },
+    {
+      "id": "e07",
+      "title": "資料07　10通の封筒",
+      "text": "書斎の机には、10通の封筒が並べられていた。\nそれぞれに、今回の容疑者の名前が記載されている。\nすべての封筒は開封されており、中身は残されていなかった。"
+    },
+    {
+      "id": "e08",
+      "title": "資料08　黒いボタン",
+      "text": "書斎の床から黒いボタンが発見された。\n被害者の衣服に欠損したボタンはなかった。\nボタンがいつ落ちたものなのかは判明していない。"
+    },
+    {
+      "id": "e09",
+      "title": "資料09　暖炉の燃え残り",
+      "text": "暖炉から、燃やされた書類の一部が発見された。\n書類の内容を完全に復元することはできなかった。\n燃え残りの中には、弁護士である黒川修一の名刺の一部も含まれていた。"
+    },
+    {
+      "id": "e10",
+      "title": "資料10　所在不明の遺言書",
+      "text": "被害者は生前、新しい遺言書を作成していたとされる。\nしかし、事件発覚後に書斎を確認したところ、遺言書は発見されなかった。"
+    },
+    {
+      "id": "e11",
+      "title": "資料11　毒物の付着状況",
+      "text": "鑑定の結果、毒物はティーカップの内側に付着していた。\nカップの外側、ソーサー、ティーポットからは同じ毒物が検出されなかった。\n付着物は、紅茶が注がれる以前からカップ内に存在していたと判断されている。\nまた、被害者の手指、衣服、所持品および書斎内からは、被害者自身が毒物を取り扱ったことを示す痕跡は確認されなかった。"
+    },
+    {
+      "id": "e12",
+      "title": "資料12　館内連絡端末の記録",
+      "text": "黒百合館では、主人の身の回りの世話に関する連絡に専用の業務端末を使用していた。端末の利用には、各職員の個別認証が必要である。\n22:35　橘千尋「今夜、旦那様が紅茶を召し上がった後、予定どおりお願いします」\n22:36　榊誠一「承知しました。書斎の鍵はこちらで管理しております」\n22:38　橘千尋「時計の件も忘れずに」\n22:39　榊誠一「心得ております。朝まで誰も入れません」\n端末の認証記録と防犯映像から、両名本人による操作であることが確認されている。"
+    }
+  ],
+  "suspects": [
+    {
+      "id": "reiji",
+      "number": 1,
+      "gender": "male",
+      "age": 42,
+      "occupation": "会社役員",
+      "relationship": "長男",
+      "publicProfile": "久世宗一郎の長男。父親が経営する企業の役員を務めている。次期経営者の有力候補とされているが、父親との関係は良好ではない。",
+      "statement": [
+        "「父とは昔から意見が合わなかった。それは認めるよ」",
+        "「昨日も晩餐会の前に、書斎で少し言い争った」",
+        "「だが、父を殺す理由なんてない。父が死んだところで、会社の問題が片付くわけでもないからな」",
+        "「晩餐会が終わった後は、自分の部屋に戻った」",
+        "「書斎には行っていない」",
+        "「父が翌朝、何かを発表するつもりだったことは知っている」",
+        "「内容までは聞かされていなかったがね」"
+      ]
+    },
+    {
+      "id": "mikoto",
+      "number": 2,
+      "gender": "female",
+      "age": 35,
+      "occupation": "元ピアニスト",
+      "relationship": "娘",
+      "publicProfile": "久世宗一郎の長女。かつては将来を期待されたピアニストだったが、現在は演奏活動から退いている。父親とは長年疎遠になっていた。",
+      "statement": [
+        "「父とは、もう何年もまともに話していませんでした」",
+        "「今回も、どうして私を招待したのか分かりません」",
+        "「晩餐会の後は、しばらく廊下を歩いていました」",
+        "「そのとき、橘さんを見かけました」",
+        "「紅茶の載ったトレーを持って、父の書斎へ向かっていました」",
+        "「扉の前で一度立ち止まって、トレーの方に視線を落としていたのを覚えています」",
+        "「その後のことは知りません」",
+        "「父の死を悲しんでいるかと聞かれても……答えに困ります」"
+      ]
+    },
+    {
+      "id": "saori",
+      "number": 3,
+      "gender": "female",
+      "age": 39,
+      "occupation": "無職",
+      "relationship": "後妻",
+      "publicProfile": "久世宗一郎の現在の妻。年齢差の大きな結婚であったことから、周囲からは財産目当てではないかと噂されている。",
+      "statement": [
+        "「主人は毎晩、寝る前に紅茶を飲む習慣がありました」",
+        "「最近は橘さんが用意することが多かったですね」",
+        "「主人には専用のティーカップがありました」",
+        "「ほかの人が使う食器と一緒にされることを嫌っていたんです」",
+        "「昨日も、橘さんが紅茶を持っていくのだろうと思っていました」",
+        "「私は晩餐会の後、自室に戻りました」",
+        "「主人が亡くなったと聞いたのは、今朝になってからです」",
+        "「遺産についてですか？」",
+        "「こんなときに、随分と失礼なことをお聞きになるんですね」"
+      ]
+    },
+    {
+      "id": "kurokawa",
+      "number": 4,
+      "gender": "male",
+      "age": 56,
+      "occupation": "弁護士",
+      "relationship": "顧問弁護士",
+      "publicProfile": "久世宗一郎の顧問弁護士。長年にわたり、久世家の財産管理や企業法務に関与してきた。",
+      "statement": [
+        "「久世氏とは、20年以上の付き合いになります」",
+        "「今回の晩餐会には、仕事上の関係で招待されました」",
+        "「翌朝の発表については、私も詳しく申し上げられません」",
+        "「守秘義務というものがありますので」",
+        "「久世氏は紅茶に関して、かなり神経質な方でした」",
+        "「茶葉はもちろん、使用する食器まで指定していました」",
+        "「専用のカップ以外で紅茶を出されれば、口をつけなかったでしょう」",
+        "「昨夜は晩餐会の後、自室で仕事をしていました」",
+        "「殺人事件に関与した事実はありません」"
+      ]
+    },
+    {
+      "id": "shiraishi",
+      "number": 5,
+      "gender": "male",
+      "age": 45,
+      "occupation": "医師",
+      "relationship": "主治医",
+      "publicProfile": "久世宗一郎の健康管理を担当していた医師。久世家とは仕事を通じて長い付き合いがある。",
+      "statement": [
+        "「久世さんには持病がありましたが、突然亡くなるような状態ではありませんでした」",
+        "「遺体を確認した際も、自然死とは考えにくいと思いました」",
+        "「毒物が検出されたと聞いて、納得しましたよ」",
+        "「それと、書斎にあった時計が気になりました」",
+        "「あの時計は以前から知っています」",
+        "「昨夜の晩餐会前にも、正常に動いていました」",
+        "「故障で止まったのでなければ、誰かが意図的に止めた可能性を考えるべきでしょう」",
+        "「私は医師ですから、毒物に詳しいというだけで疑われるのは困りますね」"
+      ]
+    },
+    {
+      "id": "amamiya",
+      "number": 6,
+      "gender": "female",
+      "age": 28,
+      "occupation": "小説家",
+      "relationship": "知人",
+      "publicProfile": "近年注目を集めている若手小説家。久世宗一郎とは文化事業を通じて知り合ったとされる。",
+      "statement": [
+        "「久世さんには、以前からお世話になっていました」",
+        "「今回の招待も、その関係だと思っていました」",
+        "「昨夜は嵐の音がひどくて、なかなか眠れなかったんです」",
+        "「気分転換に部屋を出たとき、榊さんを見かけました」",
+        "「書斎の扉を閉めているところでした」",
+        "「時計は見ていませんが、かなり遅い時間だったと思います」",
+        "「声をかけようかと思いましたけど、何となく邪魔をしてはいけない気がして……」",
+        "「それ以上のことは、本当に知りません」"
+      ]
+    },
+    {
+      "id": "kanzaki",
+      "number": 7,
+      "gender": "male",
+      "age": 33,
+      "occupation": "ジャーナリスト",
+      "relationship": "取材対象者",
+      "publicProfile": "企業や政財界を中心に取材を行うジャーナリスト。久世宗一郎に関する記事を執筆するため、今回の晩餐会に招待された。",
+      "statement": [
+        "「俺は取材のために来ただけですよ」",
+        "「久世氏が翌朝に重要な発表をすると聞いていましたからね」",
+        "「晩餐会の後、書斎の近くを通りました」",
+        "「ちょうど橘さんが出てきたところでした」",
+        "「その少し後、書斎の中から久世氏の声が聞こえました」",
+        "「電話で誰かと話しているようでしたね」",
+        "「続いて、内側から鍵をかける音も聞こえました」",
+        "「少なくとも、その時点では久世氏は生きていたはずです」",
+        "「俺が知っているのはそこまでです」"
+      ]
+    },
+    {
+      "id": "tachibana",
+      "number": 8,
+      "gender": "female",
+      "age": 31,
+      "occupation": "秘書",
+      "relationship": "個人秘書",
+      "publicProfile": "久世宗一郎の個人秘書。日程管理や書類整理、身の回りの業務を担当していた。被害者から厚い信頼を得ていたとされる。",
+      "statement": [
+        "「昨夜、久世様に紅茶をお届けしたのは私です」",
+        "「紅茶は榊さんが用意してくださいました」",
+        "「私は洗浄済みのカップとティーポットを受け取り、そのまま書斎へ運びました」",
+        "「書斎で紅茶を注いだのも私です」",
+        "「久世様は、いつもどおり紅茶を召し上がっていました」",
+        "「カップには何も入っていませんでしたし、厨房を出てから余計なことはしていません」",
+        "「その後、私は書斎を退出しました」",
+        "「榊さんとの連絡については、翌朝の発表に関する準備の話です」",
+        "「時計の件も、業務上の連絡にすぎません」",
+        "「久世様を殺害する理由など、私にはありません」"
+      ]
+    },
+    {
+      "id": "sakaki",
+      "number": 9,
+      "gender": "male",
+      "age": 62,
+      "occupation": "執事",
+      "relationship": "使用人",
+      "publicProfile": "黒百合館の管理を任されている執事。長年にわたり久世家に仕えてきた。館内の鍵や設備の管理も担当している。",
+      "statement": [
+        "「旦那様には、長年お仕えしてまいりました」",
+        "「昨夜の紅茶を用意したのは、確かに私でございます」",
+        "「ただし、茶葉や紅茶に異常はございません」",
+        "「私自身も味を確認しておりますので」",
+        "「書斎の管理用の合鍵は、常に私が所持しております」",
+        "「昨夜は誰にも貸しておりません」",
+        "「旦那様がお休みになる前に、書斎へ入ったという事実はございません」",
+        "「橘様との連絡は、翌朝の準備に関するものでございます」",
+        "「時計を操作した覚えもございません」",
+        "「旦那様のご遺体を発見したのは、今朝が初めてでございます」"
+      ]
+    },
+    {
+      "id": "minase",
+      "number": 10,
+      "gender": "female",
+      "age": 26,
+      "occupation": "不明",
+      "relationship": "不明",
+      "publicProfile": "今回の晩餐会に招待された女性。久世宗一郎との具体的な関係は明らかになっていない。ほかの招待客との面識もほとんどない。",
+      "statement": [
+        "「私がどうして招待されたのかは、話す必要がありますか？」",
+        "「事件とは関係ありません」",
+        "「昨夜は厨房の近くにいました」",
+        "「橘さんが紅茶を運ぶ準備をしているところを見ました」",
+        "「榊さんが用意した紅茶を、橘さん自身も別のカップで少し飲んでいました」",
+        "「それから、久世さん専用の空のカップをトレーに載せて出ていきました」",
+        "「厨房を出るときには、誰かと一緒ではありませんでした」",
+        "「私は、その後のことは知りません」",
+        "「私がここに来た目的と、久世さんが殺されたことは別の話です」"
+      ]
+    }
+  ],
+  "deductionLead": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "以上が、10人の供述です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "皆さん、それぞれ何かを抱えているようですね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "ですが、秘密を持っていることと、殺人に関与していることは同じではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "重要なのは、供述と事件資料の間にある矛盾です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "誰が久世氏を殺害したのか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、その犯行に協力した人物が存在するのか"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生の推理をお聞かせください"
+    }
+  ],
+  "solution": {
+    "culprit": "tachibana",
+    "accomplice": "sakaki"
+  },
+  "defeat": [
+    {
+      "speaker": "female",
+      "text": "……ふふっ"
+    },
+    {
+      "speaker": "female",
+      "text": "名探偵と聞いていたのに、随分と期待外れね"
+    },
+    {
+      "speaker": "male",
+      "text": "人というものは、目の前にある事実よりも、自分が信じたい物語を選ぶものです"
+    },
+    {
+      "speaker": "female",
+      "text": "秘密を抱えている人間が、全員殺人犯だとでも思ったのかしら？"
+    },
+    {
+      "speaker": "male",
+      "text": "誰もが嘘をつく。ですが、すべての嘘が同じ意味を持つわけではございません"
+    },
+    {
+      "speaker": "female",
+      "text": "おかげで、私たちはまだ自由でいられる"
+    },
+    {
+      "speaker": "male",
+      "text": "実に残念でございますね"
+    },
+    {
+      "speaker": "female",
+      "text": "さようなら、名探偵さん"
+    },
+    {
+      "speaker": "female",
+      "text": "次はもう少し、私たちを楽しませてちょうだい"
+    }
+  ],
+  "resolution": [
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生、お見事です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "先生の推理を受けて警察が捜査を進めた結果、事件の真相が明らかになりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "久世宗一郎氏を殺害した犯人は、個人秘書の橘千尋"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、その犯行に協力した共謀者は、執事の榊誠一でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "それでは、事件の全貌をご説明します"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "まず注目すべきなのは、毒物が検出された場所です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "毒物はティーポットではなく、久世氏専用のティーカップから検出されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "同じティーポットの紅茶を、榊氏も橘氏も口にしています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "しかし、両名には何の異常もありませんでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "毒物が存在していたのは、久世氏のカップだけだったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "食器管理記録によれば、そのカップは洗浄後、橘氏に引き渡されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "防犯映像にも、橘氏が厨房から書斎まで一人で移動したことが記録されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "鑑定によって、毒物は紅茶が注がれる以前からカップ内に存在していたことも判明しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "つまり、正常な状態で引き渡されたカップが、久世氏に使用されるまでの間に変化したのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "その間、カップを管理していた人物は橘氏でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "橘氏は、何も入っていなかったカップをそのまま運んだと供述していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "ですが、その供述は鑑定結果と一致しません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "study",
+      "text": "彼女は、自分が管理していたカップについて嘘をついていたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "次に、書斎が施錠されていた理由です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "神崎氏は、橘氏が退出した後も久世氏が生きていたことを証言しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "さらに、久世氏が内側から鍵をかける音も聞いていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "犯人が密室を作り出す必要はなかったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "久世氏は自分で書斎を施錠していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "しかし、その後に書斎へ入った人物がいます"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "執事の榊氏です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "防犯映像には、午後11時41分に榊氏が書斎へ入ったことが記録されていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "彼は昨夜、書斎には入っていないと供述していましたね"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "その供述は明確な嘘でした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "榊氏は管理用の合鍵を使用して書斎へ入り、午後11時49分に退出しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "書斎の時計は、午後11時47分で停止していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "故障ではなく、人為的に停止させられたものです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "時計の背面からは、榊氏の血液が検出されました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "捜査の結果、榊氏は当日の午後に手を負傷していたことが確認されています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "榊氏は書斎に入った際、時計を操作していたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "午後11時47分という時刻は、実際の死亡時刻を示すものではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "時計を停止させることで、事件の時系列に偽りの手掛かりを残そうとしたのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "ただし、時計を操作しただけでは、榊氏が殺人計画に参加していたとは断定できません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "study",
+      "text": "そこで重要になるのが、橘氏と榊氏の連絡記録です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "橘氏と榊氏は、紅茶が書斎へ届けられる以前から連絡を取り合っていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "橘氏は、久世氏が紅茶を飲んだ後の行動を榊氏に依頼しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "さらに、時計の操作についても言及していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "榊氏は、それを了承しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして実際に、榊氏は合鍵で書斎に入り、時計を操作し、その事実を隠していました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "これは、事件を偶然発見した人物による突発的な行動ではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "紅茶が届けられる前から予定されていた行動です"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "橘氏が殺害を実行し、榊氏がその後の工作を担当する"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "両名の行動は、一つの計画としてつながっています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "警察による取り調べでも、両名は最終的に共謀を認めました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "橘氏が久世氏の秘書になったのは、7年前のことでした"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "その以前、彼女の父親は久世氏の企業で働いていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "しかし、企業内部で発生した不正の責任を負わされ、職を失ったそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "父親はその後、心身の調子を崩し、亡くなりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "橘氏は、父親の人生を奪った人物が久世氏であると考えていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "秘書となったのも、その真相を調べるためだったと供述しています"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "そして、翌朝に予定されていた発表によって、橘氏は久世氏に近づく機会を失うと考えました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "tachibana",
+      "background": "mansion",
+      "text": "それが、今回の犯行を決意するきっかけとなったのです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "榊氏にも、久世氏を憎む理由がありました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "彼は長年、久世家に仕える中で、主人のさまざまな不正を目にしてきました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "その中には、橘氏の父親に関する出来事も含まれていました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "榊氏は、当時その事実を知りながら、何もできなかったことを悔やんでいたそうです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "橘氏の計画を知った彼は、止めるのではなく、協力することを選びました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "sakaki",
+      "background": "mansion",
+      "text": "長年仕えた主人に対する忠誠心は、すでに失われていたのでしょう"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "これで、久世宗一郎氏の殺害事件は解決しました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "もっとも、現場に残されたすべての謎が解けたわけではありません"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "10通の封筒"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "黒いボタン"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "暖炉で燃やされた書類"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "そして、所在不明の遺言書"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回の殺害に直接関係しないものも含まれているようです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "警察はそれらについても、必要に応じて調査を続けるとのことです"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "誰もが、他人には知られたくない何かを持っているのでしょう"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "ですが、私たちが今回追うべき事件の真相は明らかになりました"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "お疲れ様でした、先生"
+    },
+    {
+      "speaker": "assistant",
+      "portrait": "assistant",
+      "background": "office",
+      "text": "今回も、お見事な推理でした"
+    }
+  ],
+  "wallpapers": [
+    {
+      "name": "探偵事務所",
+      "resolution": "1920x1080",
+      "file": "common_bg_office.png",
+      "path": "assets/backgrounds/common/common_bg_office.png"
+    },
+    {
+      "name": "黒百合館・外観",
+      "resolution": "1920x1080",
+      "file": "case01_bg_mansion.png",
+      "path": "assets/backgrounds/case01/case01_bg_mansion.png"
+    },
+    {
+      "name": "黒百合館・書斎",
+      "resolution": "1920x1080",
+      "file": "case01_bg_study.png",
+      "path": "assets/backgrounds/case01/case01_bg_study.png"
+    },
+    {
+      "name": "黒百合館・応接室",
+      "resolution": "1920x1080",
+      "file": "case01_bg_interview.png",
+      "path": "assets/backgrounds/case01/case01_bg_interview.png"
+    },
+    {
+      "name": "闇の空間",
+      "resolution": "1920x1080",
+      "file": "common_bg_defeat.png",
+      "path": "assets/backgrounds/common/common_bg_defeat.png"
+    }
+  ]
+}

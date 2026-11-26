@@ -1,0 +1,11 @@
+{
+  "cases": [
+    {
+      "id": "case01",
+      "number": 1,
+      "title": "孤島の晩餐会",
+      "dataPath": "data/cases/case01.json",
+      "unlocksAfter": null
+    }
+  ]
+}
