@@ -9,6 +9,13 @@
     margin-right: clamp(24px, 4vw, 48px);
     margin-bottom: clamp(26px, 4vh, 36px);
   }
+  .dialogue-panel.episode-dialogue-panel {
+    width: min(62%, 900px);
+    min-height: clamp(230px, 28vh, 300px);
+    margin-right: clamp(24px, 4vw, 48px);
+    margin-bottom: clamp(26px, 4vh, 36px);
+  }
+  .dialogue-panel.episode-dialogue-panel.portrait-right-panel { margin-left: clamp(24px, 4vw, 48px); margin-right: auto; }
 }
 @media (max-width: 780px) {
   .app-header { padding: 12px 15px 8px; }
@@ -32,7 +39,8 @@
   .dialogue-portrait { max-height: 100%; max-width: 82vw; }
   .dialogue-panel, .dialogue-panel.without-portrait { width: calc(100% - 22px); min-height: 210px; margin: -8px auto 12px; padding: 17px 18px 15px; }
   .dialogue-panel.portrait-right-panel { margin: -8px auto 12px; }
-  .dialogue-panel.testimony-panel { width: calc(100% - 22px); min-height: 210px; margin: -8px auto 12px; padding: 17px 18px 15px; }
+  .dialogue-panel.testimony-panel, .dialogue-panel.episode-dialogue-panel { width: calc(100% - 22px); min-height: 210px; margin: -8px auto 12px; padding: 17px 18px 15px; }
+  .dialogue-panel.episode-dialogue-panel.portrait-right-panel { margin: -8px auto 12px; }
   .dialogue-text { min-height: 84px; padding: 14px 0 8px; font-size: 1.04rem; line-height: 1.85; }
   .testimony-heading { width: calc(100% - 28px); padding-top: 8px; }
   .testimony-heading-row { font-size: .73rem; }

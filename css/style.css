@@ -98,6 +98,12 @@ a { color: inherit; }
 }
 .dialogue-panel.without-portrait { width: min(82%, 1200px); margin: 0 auto 5vh; }
 .dialogue-panel.portrait-right-panel { margin-left: clamp(24px, 4vw, 82px); margin-right: auto; }
+.dialogue-panel.episode-dialogue-panel {
+  width: min(62vw, 1600px);
+  min-height: clamp(250px, 27vh, 390px);
+  margin: 0 clamp(40px, 4vw, 100px) clamp(26px, 3.5vh, 50px) auto;
+}
+.dialogue-panel.episode-dialogue-panel.portrait-right-panel { margin-left: clamp(40px, 4vw, 100px); margin-right: auto; }
 .dialogue-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 11px; }
 .speaker-name { font-size: .9rem; color: var(--gold); letter-spacing: .13em; }
 .dialogue-count { color: var(--muted); font-size: .75rem; font-family: sans-serif; }

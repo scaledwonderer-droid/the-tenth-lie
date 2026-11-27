@@ -850,7 +850,7 @@ export class GameController {
     const count = '<span class="dialogue-count">' + (this.state.dialogueIndex + 1) + ' / ' + lines.length + '</span>';
     this.mount('<div class="dialogue-screen">' + this.header() +
       '<div class="dialogue-stage">' + image +
-        '<section class="dialogue-panel panel ' + (image ? (portraitRight ? "portrait-right-panel" : "") : "without-portrait") + '" data-advance>' +
+        '<section class="dialogue-panel panel episode-dialogue-panel ' + (image ? (portraitRight ? "portrait-right-panel" : "") : "without-portrait") + '" data-advance>' +
           '<div class="dialogue-meta"><span class="speaker-name">' + escapeHTML(this.characterName(line.speaker) || line.speaker || "助手") + '</span>' + count + '</div>' +
           '<div class="dialogue-text" data-typewriter>' + escapeHTML(line.text) + '</div>' +
           '<div class="dialogue-controls"><span class="advance-hint">クリック・タップ・Enter・Spaceで進む</span><button class="primary-button" data-action="advance">次へ　›</button></div>' +
